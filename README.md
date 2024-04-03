@@ -606,14 +606,6 @@ CloudflareScanner.exe -f 1.txt
 
 * * *
 
-#### #Speed ​​up all websites using Cloudflare CDN once and for all (no need to add domain names to Hosts one by one)
-
-I have said before that the purpose of developing this software project is to pass**Change the Hosts method to speed up access to websites using Cloudflare CDN**。
-
-But just like[**#8**](https://github.com/Ptechgithub/CloudflareScanner/issues/8)As mentioned, adding domain names to Hosts one by one is actually**Too troublesome**, so I found one**Once and for all**way! You can watch this[**Still adding Hosts one by one? The perfect local acceleration method for all websites using Cloudflare CDN is here!**](https://github.com/Ptechgithub/CloudflareScanner/discussions/71)and another[Rely on the local DNS service to modify the domain name resolution IP to a self-selected IP](https://github.com/Ptechgithub/CloudflareScanner/discussions/317)tutorial.
-
-* * *
-
 #### #Automatically update Hosts
 
 Considering that many people need to replace the IP in the Hosts file after getting the fastest Cloudflare CDN IP.
