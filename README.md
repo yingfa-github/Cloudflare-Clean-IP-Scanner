@@ -277,25 +277,25 @@ Many people encounter errors when running CloudflareST with **absolute paths** i
 
 ****
 
-#### \# Windows 快捷方式带参数运行 CloudflareST
+#### Running CloudflareST with Parameters via Windows Shortcut
 
-如果不经常修改运行参数（比如平时都是直接双击运行）的人，建议使用快捷方式，更方便点。
+For those who don't frequently modify runtime parameters (such as usually double-clicking to run), using a shortcut is more convenient.
 
 <details>
-<summary><code><strong>「 点击展开 查看内容 」</strong></code></summary>
+<summary><code><strong>「 Click to Expand and View Content 」</strong></code></summary>
 
 ****
 
-右键 `CloudflareST.exe` 文件 - **\[创建快捷方式\]**，然后右键该快捷方式 - **\[属性\]**，修改其**目标**：
+Right-click the `CloudflareST.exe` file - **\[Create Shortcut\]**, then right-click the created shortcut - **\[Properties\]**, and modify its **Target**:
 
-``` bash
-# 如果要不输出结果文件，那么请加上 -o " "，引号里的是空格（没有空格会导致该参数被省略）。
+```bash
+# If you don't want to output a result file, please add -o " ", where the quotes contain a space (omitting the space will cause this parameter to be omitted).
 D:\ABC\CloudflareST\CloudflareST.exe -n 500 -t 4 -dn 20 -dt 5 -o " "
 
-# 如果文件路径包含引号，则需要把启动参数放在引号外面，记得引号和 - 之间有空格。
+# If the file path contains quotes, then the startup parameters need to be placed outside the quotes. Remember to have a space between the quotes and the -.
 "D:\Program Files\CloudflareST\CloudflareST.exe" -n 500 -t 4 -dn 20 -dt 5 -o " "
 
-# 注意！快捷方式 - 起始位置 不能是空的，否则就会因为绝对路径而找不到 ip.txt 文件
+# Note! The starting location of the shortcut cannot be empty, otherwise, it will not find the ip.txt file due to the absolute path.
 ```
 
 </details>
@@ -305,57 +305,55 @@ D:\ABC\CloudflareST\CloudflareST.exe -n 500 -t 4 -dn 20 -dt 5 -o " "
 #### \# IPv4/IPv6
 
 <details>
-<summary><code><strong>「 点击展开 查看内容 」</strong></code></summary>
+<summary><code><strong>「 Click to Expand and View Content 」</strong></code></summary>
 
 ****
-``` bash
-# 指定自带的 IPv4 数据文件可测速这些 IPv4 地址（-f 默认值就是 ip.txt，所以该参数可省略）
+```bash
+# Specify the built-in IPv4 data file to test these IPv4 addresses (the -f parameter defaults to ip.txt, so it can be omitted)
 CloudflareST.exe -f ip.txt
 
-# 指定自带的 IPv6 数据文件可测速这些 IPv6 地址
-# 另外，v2.1.0 版本后支持 IPv4+IPv6 混合测速并移除了 -ipv6 参数，因此一个文件内可以同时包含 IPv4+IPv6 地址
+# Specify the built-in IPv6 data file to test these IPv6 addresses
+# Additionally, starting from version 2.1.0, CloudflareST supports testing IPv4+IPv6 addresses together and removes the -ipv6 parameter. Therefore, one file can contain both IPv4+IPv6 addresses.
 CloudflareST.exe -f ipv6.txt
 
-# 也可以直接通过参数指定要测速的 IP
+# You can also directly specify the IPs to be tested through parameters
 CloudflareST.exe -ip 1.1.1.1,2606:4700::/32
 ```
 
-> 测速 IPv6 时，可能会注意到每次测速数量都不一样，了解原因： [#120](https://github.com/Ptechgithub/CloudflareScanner/issues/120)  
-> 因为 IPv6 太多（以亿为单位），且绝大部分 IP 段压根未启用，所以我只扫了一部分可用的 IPv6 段写到 `ipv6.txt` 文件中，有兴趣的可以自行扫描增删，ASN 数据源来自：[bgp.he.net](https://bgp.he.net/AS13335#_prefixes6)
-
-</details>
+When testing IPv6, you may notice that the number of tests varies each time. The reason is explained here: [#120](https://github.com/Ptechgithub/CloudflareScanner/issues/120)  
+Because there are too many IPv6 addresses (in the billions), and the vast majority of IP ranges are not in use, I only scanned a portion of the available IPv6 ranges and wrote them to the `ipv6.txt` file. If you're interested, you can scan and modify them yourself. The ASN data source is from: [bgp.he.net](https://bgp.he.net/AS13335#_prefixes6)
 
 ****
 
 #### \# HTTPing
 
 <details>
-<summary><code><strong>「 点击展开 查看内容 」</strong></code></summary>
+<summary><code><strong>「 Click to Expand and View Content 」</strong></code></summary>
 
 ****
 
-目前有两种延迟测速模式，分别为 **TCP 协议、HTTP 协议**。  
-TCP 协议耗时更短、消耗资源更少，超时时间为 1 秒，该协议为默认模式。  
-HTTP 协议适用于快速测试某域名指向某 IP 时是否可以访问，超时时间为 2 秒。  
-同一个 IP，各协议去 Ping 得到的延迟一般为：**ICMP < TCP < HTTP**，越靠右对丢包等网络波动越敏感。
+There are currently two latency testing modes, **TCP protocol and HTTP protocol**.  
+The TCP protocol is faster and consumes fewer resources, with a timeout of 1 second, and this is the default mode.  
+The HTTP protocol is suitable for quickly testing whether a domain points to a certain IP and whether it can be accessed. The timeout is set to 2 seconds.  
+For the same IP, the latencies obtained by each protocol generally follow this order: **ICMP < TCP < HTTP**, with HTTP being more sensitive to network fluctuations such as packet loss.
 
-> 注意：HTTPing 本质上也算一种**网络扫描**行为，因此如果你在服务器上面运行，需要**降低并发**(`-n`)，否则可能会被一些严格的商家暂停服务。如果你遇到 HTTPing 首次测速可用 IP 数量正常，后续测速越来越少甚至直接为 0，但停一段时间后又恢复了的情况，那么也可能是被 运营商、Cloudflare CDN 认为你在网络扫描而**触发临时限制机制**，因此才会过一会儿就恢复了，建议**降低并发**(`-n`)减少这种情况的发生。
+> Note: HTTPing is essentially a form of **network scanning** behavior. Therefore, if you are running it on a server, you need to **reduce concurrency** (`-n`), otherwise, you may be suspended by some strict providers. If you encounter a situation where the number of available IPs decreases during HTTPing, or even becomes 0, but then recovers after a while, it may be due to **temporary restriction mechanisms** triggered by the ISP or Cloudflare CDN, perceiving your activity as network scanning. In this case, it usually recovers after a while. It is recommended to **reduce concurrency** (`-n`) to reduce the occurrence of such situations.
 
-> 另外，本软件 HTTPing 仅获取**响应头(response headers)**，并不获取正文内容（即 URL 文件大小不影响 HTTPing 测试，但如果你还要下载测速的话，那么还是需要一个大文件的），类似于 curl -i 功能。
+> Additionally, this software's HTTPing only retrieves **response headers** and does not retrieve the body content (meaning the URL file size does not affect HTTPing testing, but if you also want to perform download speed testing, you will need a large file). It is similar to the curl -i functionality.
 
 ``` bash
-# 只需加上 -httping 参数即可切换到 HTTP 协议延迟测速模式
+# Simply add the -httping parameter to switch to HTTP protocol latency testing mode
 CloudflareST.exe -httping
 
-# 软件会根据访问时网页返回的有效 HTTP 状态码来判断可用性（当然超时也算），默认对返回 200 301 302 这三个 HTTP 状态码的视为有效，可以手动指定认为有效的 HTTP 状态码，但只能指定一个（你需要提前确定测试地址正常情况下会返回哪个状态码）
+# The software determines availability based on the effective HTTP status code returned when accessing the webpage (of course, timeouts are also counted). By default, the software considers 200, 301, and 302 HTTP status codes as valid. You can manually specify the HTTP status code you consider valid, but only one can be specified (you need to confirm in advance which status code the test address will return under normal circumstances).
 CloudflareST.exe -httping -httping-code 200
 
-# 通过 -url 参数来指定 HTTPing 测试地址（可以是任意网页 URL，不局限于具体文件地址）
+# Use the -url parameter to specify the HTTPing test address (it can be any webpage URL, not limited to specific file addresses)
 CloudflareST.exe -httping -url https://cf.xiu2.xyz/url
-# 如果你要 HTTPing 测试其他网站/CDN，那么指定一个该网站/使用该 CDN 的地址（因为软件默认地址是 Cloudflare 的，只能用于测试 Cloudflare 的 IP）
+# If you want to HTTPing test other websites/CDNs, specify an address that uses that website/CDN (because the software defaults to Cloudflare's address, it can only be used to test Cloudflare's IPs)
 
-# 注意：如果测速地址为 HTTP 协议，记得加上 -tp 80（这个参数会影响 延迟测速/下载测速 时使用的端口）
-# 同理，如果要测速 80 端口，那么也需要加上 -url 参数来指定一个 http:// 协议的地址才行（且该地址不会强制重定向至 HTTPS），如果是非 80 443 端口，那么需要确定该下载测速地址是否支持通过该端口访问。
+# Note: If the test address is using the HTTP protocol, remember to add -tp 80 (this parameter will affect the port used during latency testing/download speed testing)
+# Similarly, if you want to test port 80, you also need to add the -url parameter to specify an address with the http:// protocol (and this address should not be forcibly redirected to HTTPS). If it is a port other than 80 or 443, you need to make sure that the download speed test address supports access through that port.
 CloudflareST.exe -httping -tp 80 -url http://cdn.cloudflare.steamstatic.com/steam/apps/5952/movie_max.webm
 ```
 
