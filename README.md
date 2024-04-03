@@ -24,32 +24,32 @@ While Cloudflare exposes all[IP segment](https://www.cloudflare.com/ips/), but t
 The following commands are only examples. For the version number and file name, please go to[**Releases**](https://github.com/Ptechgithub/CloudflareScanner/releases)Check.
 
 ```yaml
-# 如果是第一次使用，则建议创建新文件夹（后续更新时，跳过该步骤）
+# If this is your first time using it, it is recommended to create a new folder (skip this step for subsequent updates)
 mkdir CloudflareScanner
 
-# 进入文件夹（后续更新，只需要从这里重复下面的下载、解压命令即可）
+# Enter the folder (for subsequent updates, only repeat the following download and unzip commands from here)
 cd CloudflareScanner
 
-# 下载 CloudflareScanner 压缩包（自行根据需求替换 URL 中 [版本号] 和 [文件名]）
+# Download the CloudflareScanner zip file (replace [version number] and [file name] in the URL according to your needs)
 wget -N https://github.com/Ptechgithub/CloudflareScanner/releases/download/v2.2.5/CloudflareScanner_linux_amd64.zip
-# 如果你是在国内网络环境中下载，那么请使用下面这几个镜像加速之一：
+# If you are downloading in a Chinese network environment, please use one of the following mirror accelerations:
 # wget -N https://download.scholar.rr.nu/Ptechgithub/CloudflareScanner/releases/download/v2.2.5/CloudflareScanner_linux_amd64.zip
 # wget -N https://ghproxy.cc/https://github.com/Ptechgithub/CloudflareScanner/releases/download/v2.2.5/CloudflareScanner_linux_amd64.zip
 # wget -N https://ghproxy.net/https://github.com/Ptechgithub/CloudflareScanner/releases/download/v2.2.5/CloudflareScanner_linux_amd64.zip
 # wget -N https://gh-proxy.com/https://github.com/Ptechgithub/CloudflareScanner/releases/download/v2.2.5/CloudflareScanner_linux_amd64.zip
 # wget -N https://mirror.ghproxy.com/https://github.com/Ptechgithub/CloudflareScanner/releases/download/v2.2.5/CloudflareScanner_linux_amd64.zip
-# 如果下载失败的话，尝试删除 -N 参数（如果是为了更新，则记得提前删除旧压缩包 rm CloudflareScanner_linux_amd64.zip ）
+# If the download fails, try removing the -N parameter (if for updating, remember to delete the old zip file in advance rm CloudflareScanner_linux_amd64.zip)
 
-# 解压（不需要删除旧文件，会直接覆盖，自行根据需求替换 文件名）
+# Unzip (no need to delete old files, they will be overwritten directly, replace the file name according to your needs)
 tar -zxf CloudflareScanner_linux_amd64.zip
 
-# 赋予执行权限
+# Grant execution permission
 chmod +x CloudflareScanner
 
-# 运行（不带参数）
+# Run (without parameters)
 ./CloudflareScanner
 
-# 运行（带参数示例）
+# Run (with parameter example)
 ./CloudflareScanner -dd -tll 90
 ```
 
