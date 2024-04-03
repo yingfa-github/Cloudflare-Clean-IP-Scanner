@@ -108,7 +108,7 @@ The complete results are saved in the current directory`result.csv`file, use**No
 
 * * *
 
-## #Advanced use
+### Advanced use
 
 The default parameters are used for direct operation. If you want the speed measurement results to be more comprehensive and more in line with your own requirements, you can customize the parameters.
 
@@ -306,7 +306,7 @@ D:\ABC\CloudflareScanner\CloudflareScanner.exe -n 500 -t 4 -dn 20 -dt 5 -o " "
 
 * * *
 
-#### #IPv4/IPv6
+#### IPv4/IPv6
 
 <details>
 <summary><code><strong>「 Click to expand view content 」</strong></code></summary>
@@ -392,7 +392,7 @@ CloudflareScanner.exe -cfcolo HKG,KHH,NRT,LAX,SEA,SJC,FRA,MAD
 
 * * *
 
-#### #File relative/absolute path
+#### File relative/absolute path
 
 <details>
 <summary><code><strong>「 Click to expand view content 」</strong></code></summary>
@@ -553,7 +553,7 @@ CloudflareScanner.exe -tl 200 -sl 5.6 -dn 10
 
 * * *
 
-#### #Test the speed of one or multiple IPs individually
+#### Test the speed of one or multiple IPs individually
 
 <details>
 <summary><code><strong>「 Click to expand view content 」</strong></code></summary>
