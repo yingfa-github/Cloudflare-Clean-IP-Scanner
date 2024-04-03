@@ -44,6 +44,7 @@ jobs:
       GOARCH: ${{ matrix.goarch }}
       GOARM: ${{ matrix.goarm }}
       CGO_ENABLED: 0
+      VERSION: "v2.2.5"
 
     steps:
       - name: Checkout codebase
@@ -64,7 +65,7 @@ jobs:
 
       - name: Build CloudflareScanner
         run: |
-          go build -v -o build_assets/ -trimpath -ldflags "-s -w -buildid=" .
+          go build -v -o build_assets/ -trimpath -ldflags "-s -w -X main.version=${VERSION} -buildid=" .
 
       - name: Copy ip.txt & ipv6.txt
         run: |
