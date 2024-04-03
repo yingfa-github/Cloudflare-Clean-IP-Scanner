@@ -203,11 +203,11 @@ Press Enter or Ctrl+C to exit.
 > People who are new to CloudflareScanner may be confused**There are obviously 30 IPs available for delay speed testing, so why are there only 3 left in the end?**  
 > What does the queue in the download speed test mean? Do I still have to queue up when I download the speed test?
 
-CloudflareScanner will first delay the speed test, during which the number of available IPs will be displayed in real time on the right side of the progress bar (`可用: 30`), but note that the available quantity refers to**Number of IPs that passed the test without timeout**, has nothing to do with the upper and lower limits of delay and packet loss conditions. When the delayed speed test is completed, because it is also specified**Delay upper and lower limits, packet loss**conditions, so after filtering according to the conditions, only`10`Already (that is, waiting for the download speed test)`队列：10`）。
+CloudflareScanner will first delay the speed test, during which the number of available IPs will be displayed in real time on the right side of the progress bar (`Available: 30`), but note that the available quantity refers to**Number of IPs that passed the test without timeout**, has nothing to do with the upper and lower limits of delay and packet loss conditions. When the delayed speed test is completed, because it is also specified**Delay upper and lower limits, packet loss**conditions, so after filtering according to the conditions, only`10`Already (that is, waiting for the download speed test)`队列：10`）。
 
 That is, in the above example,`321`After the IP delay speed test is completed, only`30`Each IP test passes without timeout, and then according to the upper and lower limit range of delay:`40 ~ 150 ms`and packet loss upper limit conditions, only`10`There is an IP that meets the requirements. if you`-dd`If the download speed test is disabled, this will be output directly.`10`IP. Of course, this example is not disabled, so the software will continue to`10`IP for download speed test (`队列：10`）。
 
-> Because the download speed test is a single-threaded one-by-one IP queue test, so the number of IPs waiting for the download speed test is called`队列`。
+> Because the download speed test is a single-threaded one-by-one IP queue test, so the number of IPs waiting for the download speed test is called`queue`。
 
 * * *
 
