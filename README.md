@@ -219,7 +219,7 @@ Download speed test progress bar`3 / 5`, the former refers to finding`3`IPs that
 
 The software is finishing the speed test`10`After IPs, only`3`download speeds higher than`1 MB/s`of IPs, and the rest`7`Each IP is "failed".
 
-Therefore, this is not`“每次测速都不到 5 就中断了”`, but all IPs have downloaded and tested the speed, but only found`3`one that meets the conditions.
+Therefore, this is not "Every time the speed test falls short of 5 it interrupts", but rather, all IPs have been downloaded and their speeds tested, yet only found `3` that meet the criteria.
 
 * * *
 
