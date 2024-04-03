@@ -171,12 +171,12 @@ Options:
         Print help information
 ```
 
-### 界面解释
+### Interface Explanation
 
-为了避免大家对测速过程中的**输出内容产生误解（可用、队列等数字，下载测速一半就"中断"？）**，我特意解释下。
+To avoid misunderstanding the **output content during the speed test process (available, queued numbers, download speed "interrupted" halfway)**, I will explain it here.
 
 <details>
-<summary><code><strong>「 点击展开 查看内容 」</strong></code></summary>
+<summary><code><strong>「 Click to expand to view content 」</strong></code></summary>
 
 ****
 
