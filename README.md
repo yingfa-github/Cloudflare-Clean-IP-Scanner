@@ -612,8 +612,9 @@ CloudflareScanner.exe -f 1.txt
 For convenience, I write the version number into the version variable in the code when compiling, so when you compile manually, you need to add it as follows:`go build`Add after the command`-ldflags`Parameter to specify the version number:
 
 ```bash
+# Run this command in the CloudflareScanner directory via the command line (e.g., CMD, Bat script) to compile a binary executable program that can run in an environment with the same system, bitness, and architecture as the current device (Go will automatically detect your system bitness and architecture), and the version number will be v2.3.3.
+
 go build -ldflags "-s -w -X main.version=v2.3.3"
-# 在 CloudflareScanner 目录中通过命令行（例如 CMD、Bat 脚本）运行该命令，即可编译一个可在和当前设备同样系统、位数、架构的环境下运行的二进制程序（Go 会自动检测你的系统位数、架构）且版本号为 v2.3.3
 ```
 
 If you want to compile under Windows 64-bit system**Other systems, architectures, bits**, then you need to specify**GOOS**and**GOARCH**variable.
@@ -642,7 +643,7 @@ Of course, in order to facilitate batch compilation, I will specifically specify
 At the same time, if you want to compile in batches, you need to put them in different folders (or the file names are different). You need to add`-o`Parameters specified.
 
 ```bat
-:: Windows 系统下是这样：
+:: For Windows system：
 SET version=v2.3.3
 SET GOOS=linux
 SET GOARCH=amd64
@@ -650,7 +651,7 @@ go build -o Releases\CloudflareScanner_linux_amd64\CloudflareScanner -ldflags "-
 ```
 
 ```bash
-# Linux 系统下是这样：
+# For Linux system：
 version=v2.3.3
 GOOS=windows
 GOARCH=386
