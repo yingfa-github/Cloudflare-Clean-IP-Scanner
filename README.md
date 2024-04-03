@@ -314,14 +314,14 @@ D:\ABC\CloudflareScanner\CloudflareScanner.exe -n 500 -t 4 -dn 20 -dt 5 -o " "
 * * *
 
 ```bash
-# 指定自带的 IPv4 数据文件可测速这些 IPv4 地址（-f 默认值就是 ip.txt，所以该参数可省略）
+# You can specify the built-in IPv4 data file to test these IPv4 addresses (-f default value is ip.txt, so this parameter can be omitted)
 CloudflareScanner.exe -f ip.txt
 
-# 指定自带的 IPv6 数据文件可测速这些 IPv6 地址
-# 另外，v2.1.0 版本后支持 IPv4+IPv6 混合测速并移除了 -ipv6 参数，因此一个文件内可以同时包含 IPv4+IPv6 地址
+# You can specify the built-in IPv6 data file to test these IPv6 addresses
+# Additionally, starting from version 2.1.0, CloudflareScanner supports mixed IPv4+IPv6 speed testing and removes the -ipv6 parameter, so one file can contain both IPv4+IPv6 addresses.
 CloudflareScanner.exe -f ipv6.txt
 
-# 也可以直接通过参数指定要测速的 IP
+# You can also directly specify the IP addresses to be tested through parameters
 CloudflareScanner.exe -ip 1.1.1.1,2606:4700::/32
 ```
 
@@ -349,19 +349,18 @@ For the same IP, the delay obtained by pinging various protocols is generally:**
 > In addition, this software HTTPing only obtains**response headers**, and does not obtain the body content (that is, the URL file size does not affect the HTTPing test, but if you want to download the speed test, you still need a large file), similar to the curl -i function.
 
 ```bash
-# 只需加上 -httping 参数即可切换到 HTTP 协议延迟测速模式
+# Simply add the -httping parameter to switch to HTTP protocol latency testing mode
 CloudflareScanner.exe -httping
 
-# 软件会根据访问时网页返回的有效 HTTP 状态码来判断可用性（当然超时也算），默认对返回 200 301 302 这三个 HTTP 状态码的视为有效，可以手动指定认为有效的 HTTP 状态码，但只能指定一个（你需要提前确定测试地址正常情况下会返回哪个状态码）
+# The software will determine availability based on the valid HTTP status codes returned when accessing the webpage (of course, timeouts also count). By default, 200, 301, and 302 are considered valid HTTP status codes. You can manually specify valid HTTP status codes, but only one can be specified (you need to determine in advance which status code the test address will return under normal circumstances).
 CloudflareScanner.exe -httping -httping-code 200
 
-# 通过 -url 参数来指定 HTTPing 测试地址（可以是任意网页 URL，不局限于具体文件地址）
+# Specify the HTTPing test address through the -url parameter (can be any webpage URL, not limited to specific file addresses)
 CloudflareScanner.exe -httping -url https://cf.xiu2.xyz/url
-# 如果你要 HTTPing 测试其他网站/CDN，那么指定一个该网站/使用该 CDN 的地址（因为软件默认地址是 Cloudflare 的，只能用于测试 Cloudflare 的 IP）
+# If you want to HTTPing test other websites/CDNs, specify an address used by that website/CDN (because the software's default address is Cloudflare's, it can only be used to test Cloudflare's IPs)
 
-# 注意：如果测速地址为 HTTP 协议，记得加上 -tp 80（这个参数会影响 延迟测速/下载测速 时使用的端口）
-# 同理，如果要测速 80 端口，那么也需要加上 -url 参数来指定一个 http:// 协议的地址才行（且该地址不会强制重定向至 HTTPS），如果是非 80 443 端口，那么需要确定该下载测速地址是否支持通过该端口访问。
-CloudflareScanner.exe -httping -tp 80 -url http://cdn.cloudflare.steamstatic.com/steam/apps/5952/movie_max.webm
+# Note: If the test address is using HTTP protocol, remember to add -tp 80 (this parameter will affect the port used during latency testing/download testing)
+# Similarly, if you want to test port 80, you also need to add the -url parameter to specify an address using the http:// protocol (and this address will not be forcibly redirected to HTTPS). If it is a non-80 or 443 port, make sure the download test address supports access through that port.
 ```
 
 </details>
