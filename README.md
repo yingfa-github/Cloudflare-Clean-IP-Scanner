@@ -228,23 +228,23 @@ Because as long as the `-sl` parameter is specified, testing will continue until
 
 ****
 
-另外，如果全部队列 IP 都测速完了，但一个满足下载速度条件的 IP 都没有，那么就会**直接输出全部队列 IP 的下载测速结果**，这样你就能看到这些 IP 的下载速度都有多少，心里也就有数了，然后**适当调低 `-sl` 再试试**。
+Furthermore, if all IPs in the queue have been tested for download speed but none meet the download speed criteria, then **the download speed test results for all IPs in the queue will be output directly**. This way, you can see the download speeds of these IPs and have an idea of ​​how they perform. Then, **try lowering `-sl` appropriately and try again**.
 
-同样，延迟测速方面，`可用: 30`、`队列：10` 这两个数值也可以让你清楚，你设置的延迟条件对你来说是否过于苛刻。如果可用 IP 一大堆，但条件过滤后只剩下 2、3 个，那不用说就知道需要**调低预期的延迟/丢包条件**了。
+Similarly, regarding latency testing, the two values `Available: 30` and `Queue: 10` can also help you determine whether the latency conditions you set are too strict. If you have plenty of available IPs, but after filtering conditions, only 2 or 3 remain, then it's clear that you need to **lower your expected latency/packet loss conditions**.
 
-这两个机制，一个是告诉你**延迟丢包条件**是否合适的，一个是告诉你**下载速度条件**是否合适的。
+These two mechanisms, one informing you about **latency and packet loss conditions**, and the other about **download speed conditions**, help you determine whether your settings are appropriate.
 
 </details>
 
 ****
 
-### 使用示例
+### Usage Example
 
-Windows 要指定参数需要在 CMD 中运行，或者把参数添加到快捷方式目标中。
+On Windows, to specify parameters, you need to run them in CMD, or add the parameters to the target of a shortcut.
 
-> **注意**：各参数均有**默认值**，使用默认值的参数是可以省略的（**按需选择**），参数**不分前后顺序**。  
-> **提示**：Windows **PowerShell** 只需把下面命令中的 `CloudflareST.exe` 改为 `.\CloudflareST.exe` 即可。  
-> **提示**：Linux 系统只需要把下面命令中的 `CloudflareST.exe` 改为 `./CloudflareST` 即可。
+> **Note**: All parameters have **default values**, and using parameters with default values can be omitted (**choose as needed**), parameters can be specified in any order.  
+> **Tip**: For Windows **PowerShell**, simply change `CloudflareST.exe` in the commands below to `.\CloudflareST.exe`.  
+> **Tip**: For Linux systems, simply change `CloudflareST.exe` in the commands below to `./CloudflareST`.
 
 ****
 
