@@ -138,7 +138,7 @@ func main() {
 	speedData.Print()          // Print results
 
 	if versionNew != "" {
-		fmt.Printf("\n*** Found new version [%s]! Please go to [https://github.com/Ptechgithub/CloudflareScanner] to update! ***\n", versionNew)
+		fmt.Printf("\n*** Found New Version [%s]! Please go to [https://github.com/Ptechgithub/CloudflareScanner] to update! ***\n", versionNew)
 	}
 	endPrint()
 }
