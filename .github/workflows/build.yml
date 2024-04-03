@@ -18,10 +18,8 @@ jobs:
             goarch: amd64
           - goos: darwin
             goarch: arm64
-
           - goos: android
             goarch: arm64
-
           - goos: linux
             goarch: amd64
           - goos: linux
@@ -35,7 +33,6 @@ jobs:
           - goos: linux
             goarch: arm
             goarm: 7
-
           - goos: windows
             goarch: amd64
           - goos: windows
@@ -47,6 +44,7 @@ jobs:
       GOARCH: ${{ matrix.goarch }}
       GOARM: ${{ matrix.goarm }}
       CGO_ENABLED: 0
+
     steps:
       - name: Checkout codebase
         uses: actions/checkout@v4
@@ -88,7 +86,7 @@ jobs:
       - name: Upload files to Artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: CloudflareScanner_${{ env.ASSET_NAME }}_${{ env.REF }}
+          name: CloudflareScanner_${{ env.ASSET_NAME }}
           path: |
             ./CloudflareScanner_${{ env.ASSET_NAME }}/*
 
