@@ -202,29 +202,29 @@ Press Enter or Ctrl+C to exit.
 
 > For those who are new to CloudflareST, they might be confused: **"There were originally 30 usable IPs for latency testing, why are there only 3 left now?"** What does the queue in the download speed test mean? Do I have to wait in line for the download speed test as well?
 
-CloudflareST 会先延迟测速，在这过程中进度条右侧会实时显示可用 IP 数量（`可用: 30`），但注意该可用数量指的是**测试通过没有超时的 IP 数量**，和延迟上下限、丢包条件无关。当延迟测速完成后，因为还指定了**延迟上下限、丢包**的条件，所以按照条件过滤后只剩下 `10` 个了（也就是等待下载测速的 `队列：10`）。
+CloudflareST first conducts latency testing. During this process, the progress bar on the right side will display the real-time number of available IPs (`Available: 30`). However, note that this available number refers to the **number of IPs that have passed the test without timing out**, regardless of the latency upper and lower limits or packet loss conditions. After the latency testing is completed, because specific conditions for latency upper and lower limits and packet loss were specified, only `10` IPs remain after filtering (which indicates a download speed test queue of `10`).
 
-即以上示例中，`321` 个 IP 延迟测速完成后，只有 `30` 个 IP 测试通过没有超时，然后根据延迟上下限范围：`40 ~ 150 ms` 及丢包上限条件过滤后，只剩下 `10` 个满足要求的 IP 了。如果你 `-dd` 禁用了下载测速，那么就会直接输出这 `10` 个 IP 了。当然该示例并未禁用，因此接下来软件会继续对这 `10` 个 IP 进行下载测速（`队列：10`）。
+In the example above, out of `321` IPs, only `30` IPs passed the latency test without timing out. Then, after filtering based on the latency upper and lower limits (`40 ~ 150 ms`) and the packet loss limit, only `10` IPs meeting the requirements remain. If you disable download speed testing with `-dd`, then these `10` IPs will be output directly. However, in this example, download speed testing is not disabled, so the software will continue to perform download speed testing on these `10` IPs (`Queue: 10`).
 
-> 因为下载测速是单线程一个个 IP 挨着排队测速的，因此等待下载测速的 IP 数量才会叫做 `队列`。
-
-****
-
-> 你可能注意到了，**明明指定了要找到 5 个满足下载速度条件的 IP，怎么才 3 个就 “中断” 了呢？**
-
-下载测速进度条中的 `3 / 5`，前者指的是找到了 `3` 个满足下载速度下限条件的 IP（即下载速度高于 `1 MB/s` ），后者 `5` 指的是你要求找到 `5` 个满足下载速度下限条件的 IP（`-dn 5`）。
-
-> 另外，提醒一下，如果你指定的 `-dn` 大于下载测速队列，比如你延迟测速后只剩下 `4` 个 IP 了，那么下载测速进度条中后面的数字就会和下载测速队列一样都是 `4` 个，而非你 `-dn` 指定的 `5` 个了。
-
-软件在测速完这 `10` 个 IP 后，只找到了 `3` 个下载速度高于 `1 MB/s` 的 IP，剩下的 `7` 个 IP 都是 “不及格” 的。
-
-因此，这不是 `“每次测速都不到 5 就中断了”`，而是所有 IP 都下载测速完了，但却只找到了 `3` 个满足条件的。
+> Since download speed testing is single-threaded and tests IPs one by one in sequence, the number of IPs waiting for download speed testing is referred to as the `Queue`.
 
 ****
 
-如果不想遇到这种全部测速一遍都没几个满足条件的情况，那么就要**调低下载速度上限参数 `-sl`**，或者移除。
+> You may have noticed, **even though you specified to find 5 IPs that meet the download speed conditions, why did the process "terminate" with only 3?**
 
-因为只要指定了 `-sl` 参数，那么只要没有凑够 `-dn` 的数量（默认 10 个），就会一直测速下去，直到凑够或全部测速完。移除 `-sl` 并添加 `-dn 20` 参数，这样就是只测速延迟最低的前 20 个 IP，测速完就停止，节省时间。
+In the download speed test progress bar, `3 / 5` indicates that `3` IPs meeting the download speed lower limit condition (i.e., download speed exceeding `1 MB/s`) have been found, while `5` indicates that you requested to find `5` IPs meeting this condition (`-dn 5`).
+
+> Additionally, please note that if you specify `-dn` to be greater than the download speed test queue, for example, if only `4` IPs remain after latency testing, then the number following the `/` in the download speed test progress bar will be `4`, just like the download speed test queue, rather than the `5` you specified with `-dn`.
+
+After testing the download speed of these `10` IPs, only `3` IPs were found to have a download speed exceeding `1 MB/s`, while the remaining `7` IPs did not meet the criteria.
+
+Therefore, it's not that `“the test terminates every time without reaching 5”`, but rather that all IPs were tested for download speed, but only `3` met the criteria.
+
+****
+
+If you don't want to encounter situations where only a few IPs meet the criteria after testing all of them, you can **lower the download speed upper limit parameter `-sl`** or remove it.
+
+Because as long as the `-sl` parameter is specified, testing will continue until the `-dn` quantity (default 10 IPs) is reached, or all IPs are tested. Removing `-sl` and adding the `-dn 20` parameter will only test the latency of the top 20 IPs with the lowest latency and then stop, saving time.
 
 ****
 
