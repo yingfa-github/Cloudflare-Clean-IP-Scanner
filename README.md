@@ -606,14 +606,6 @@ CloudflareScanner.exe -f 1.txt
 
 * * *
 
-#### #Automatically update Hosts
-
-Considering that many people need to replace the IP in the Hosts file after getting the fastest Cloudflare CDN IP.
-
-You can watch this[**Issues**](https://github.com/Ptechgithub/CloudflareScanner/discussions/312)Obtain**Windows/Linux automatic update Hosts script**！
-
-* * *
-
 ## Manual compilation
 
 <details>
