@@ -182,6 +182,6 @@ func (s DownloadSpeedSet) Print() {
                 fmt.Printf(dataFormat, dateString[i][0], dateString[i][1], dateString[i][2], dateString[i][3], dateString[i][4], dateString[i][5])
         }
         if !noOutput() {
-                fmt.Printf("\nComplete test results have been written to %v file, which can be viewed using Notepad/Spreadsheet software.\n", Output)
+                fmt.Printf("\nTest results written to %v file. Use Notepad/Spreadsheet to view.\n", Output)
         }
 }
