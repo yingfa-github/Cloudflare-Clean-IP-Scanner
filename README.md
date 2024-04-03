@@ -203,9 +203,9 @@ Press Enter or Ctrl+C to exit.
 > People who are new to CloudflareScanner may be confused**There are obviously 30 IPs available for delay speed testing, so why are there only 3 left in the end?**  
 > What does the queue in the download speed test mean? Do I still have to queue up when I download the speed test?
 
-CloudflareScanner will first delay the speed test, during which the number of available IPs will be displayed in real time on the right side of the progress bar (`Available: 30`), but note that the available quantity refers to**Number of IPs that passed the test without timeout**, has nothing to do with the upper and lower limits of delay and packet loss conditions. When the delayed speed test is completed, because it is also specified**Delay upper and lower limits, packet loss**conditions, so after filtering according to the conditions, only`10`Already (that is, waiting for the download speed test)`队列：10`）。
+CloudflareScanner will first delay the speed test, during which the number of available IPs will be displayed in real time on the right side of the progress bar (`Available: 30`), but note that the available quantity refers to**Number of IPs that passed the test without timeout**, has nothing to do with the upper and lower limits of delay and packet loss conditions. When the delayed speed test is completed, because it is also specified**Delay upper and lower limits, packet loss**conditions, so after filtering according to the conditions, only`10`Already (that is, waiting for the download speed test)`queue：10`）。
 
-That is, in the above example,`321`After the IP delay speed test is completed, only`30`Each IP test passes without timeout, and then according to the upper and lower limit range of delay:`40 ~ 150 ms`and packet loss upper limit conditions, only`10`There is an IP that meets the requirements. if you`-dd`If the download speed test is disabled, this will be output directly.`10`IP. Of course, this example is not disabled, so the software will continue to`10`IP for download speed test (`队列：10`）。
+That is, in the above example,`321`After the IP delay speed test is completed, only`30`Each IP test passes without timeout, and then according to the upper and lower limit range of delay:`40 ~ 150 ms`and packet loss upper limit conditions, only`10`There is an IP that meets the requirements. if you`-dd`If the download speed test is disabled, this will be output directly.`10`IP. Of course, this example is not disabled, so the software will continue to`10`IP for download speed test (`queue：10`）。
 
 > Because the download speed test is a single-threaded one-by-one IP queue test, so the number of IPs waiting for the download speed test is called`queue`。
 
@@ -231,7 +231,7 @@ Because as long as you specify`-sl`parameters, then as long as there are not eno
 
 In addition, if all queue IPs have been tested for speed, but there is no IP that meets the download speed conditions, then it will**Directly output the download speed test results of all queue IPs**, so that you can see the download speeds of these IPs, and you can know them in your mind, and then**Adjust it appropriately`-sl`try again**。
 
-Similarly, in terms of delayed speed measurement,`可用: 30`、`队列：10`These two values ​​​​can also let you know whether the delay conditions you set are too harsh for you. If there are a lot of available IPs, but only 2 or 3 are left after conditional filtering, it goes without saying that you need**Adjust down expected latency/packet loss conditions**.
+Similarly, in terms of delayed speed measurement,`可用: 30`、`queue：10`These two values ​​​​can also let you know whether the delay conditions you set are too harsh for you. If there are a lot of available IPs, but only 2 or 3 are left after conditional filtering, it goes without saying that you need**Adjust down expected latency/packet loss conditions**.
 
 Of these two mechanisms, one tells you**Delayed packet loss conditions**Whether it is appropriate or not, one will tell you**Download speed conditions**Is it appropriate.
 
