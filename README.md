@@ -491,8 +491,8 @@ CloudflareScanner.exe -tp 80 -url http://cdn.cloudflare.steamstatic.com/steam/ap
 -   Specify only**[Average latency cap]**condition
 
 ```bash
-# 平均延迟上限：200 ms，下载速度下限：0 MB/s
-# 即找到平均延迟低于 200 ms 的 IP，然后再按延迟从低到高进行 10 次下载测速
+# Maximum average latency: 200 ms, minimum download speed: 0 MB/s
+# In other words, find IPs with an average latency below 200 ms, and then perform 10 download speed tests in order of increasing latency.
 CloudflareScanner.exe -tl 200
 ```
 
@@ -503,16 +503,16 @@ CloudflareScanner.exe -tl 200
 -   Specify only**[Average latency cap]**conditions, and**Only delay the speed test, do not download the speed test**
 
 ```bash
-# 平均延迟上限：200 ms，下载速度下限：0 MB/s，数量：不知道多少 个
-# 即只输出低于 200ms 的 IP，且不再下载测速（因为不再下载测速，所以 -dn 参数就无效了）
+# Maximum average latency: 200 ms, minimum download speed: 0 MB/s, quantity: unknown
+# In other words, only output IPs with an average latency below 200 ms, and no longer perform download speed tests (because download speed tests are no longer performed, the -dn parameter becomes ineffective).
 CloudflareScanner.exe -tl 200 -dd
 ```
 
 -   Specify only**[Maximum packet loss probability]**condition
 
 ```bash
-# 丢包几率上限：0.25
-# 即找到丢包率低于等于 0.25 的 IP，范围 0.00~1.00，如果 -tlr 0 则代表过滤掉任何丢包的 IP
+# Maximum loss rate: 0.25
+# In other words, find IPs with a loss rate lower than or equal to 0.25, range 0.00~1.00. If -tlr 0, it means filtering out any IPs with loss.
 CloudflareScanner.exe -tlr 0.25
 ```
 
@@ -521,8 +521,8 @@ CloudflareScanner.exe -tlr 0.25
 -   Specify only**[Download speed minimum]**condition
 
 ```bash
-# 平均延迟上限：9999 ms，下载速度下限：5 MB/s，数量：10 个（可选）
-# 即需要找到 10 个平均延迟低于 9999 ms 且下载速度高于 5 MB/s 的 IP 才会停止测速
+# Maximum average latency: 9999 ms, minimum download speed: 5 MB/s, quantity: 10 (optional)
+# In other words, it needs to find 10 IPs with an average latency below 9999 ms and a download speed higher than 5 MB/s to stop the speed test.
 CloudflareScanner.exe -sl 5 -dn 10
 ```
 
@@ -536,9 +536,9 @@ CloudflareScanner.exe -sl 5 -dn 10
 -   Specify at the same time**[Average latency cap]+[Download speed minimum]**condition
 
 ```bash
-# 平均延迟上限、下载速度下限均支持小数（如 -sl 0.5）
-# 平均延迟上限：200 ms，下载速度下限：5.6 MB/s，数量：10 个（可选）
-# 即需要找到 10 个平均延迟低于 200 ms 且下载速度高于 5 .6MB/s 的 IP 才会停止测速
+# Maximum average latency and minimum download speed support decimals (e.g., -sl 0.5)
+# Maximum average latency: 200 ms, minimum download speed: 5.6 MB/s, quantity: 10 (optional)
+# In other words, it needs to find 10 IPs with an average latency below 200 ms and a download speed higher than 5.6 MB/s to stop the speed test.
 CloudflareScanner.exe -tl 200 -sl 5.6 -dn 10
 ```
 
@@ -564,11 +564,11 @@ CloudflareScanner.exe -tl 200 -sl 5.6 -dn 10
 Directly specify the IP segment data to be measured through parameters.
 
 ```bash
-# 先进入 CloudflareScanner 所在目录，然后运行：
-# Windows 系统（在 CMD 中运行）
+# First navigate to the directory where CloudflareScanner is located, then run:
+# For Windows systems (run in CMD)
 CloudflareScanner.exe -ip 1.1.1.1,2.2.2.2/24,2606:4700::/32
 
-# Linux 系统
+# For Linux systems
 ./CloudflareScanner -ip 1.1.1.1,2.2.2.2/24,2606:4700::/32
 ```
 
@@ -588,14 +588,14 @@ Or write these IPs into any text file in the following format, for example:`1.tx
 Then add startup parameters when running CloudflareScanner`-f 1.txt`to specify the IP segment data file.
 
 ```bash
-# 先进入 CloudflareScanner 所在目录，然后运行：
-# Windows 系统（在 CMD 中运行）
+# First navigate to the directory where CloudflareScanner is located, then run:
+# For Windows systems (run in CMD)
 CloudflareScanner.exe -f 1.txt
 
-# Linux 系统
+# For Linux systems
 ./CloudflareScanner -f 1.txt
 
-# 对于 1.0.0.1/24 这样的 IP 段只会随机最后一段（1.0.0.1~255），如果要测速该 IP 段中的所有 IP，请加上 -allip 参数。
+# For IP ranges like 1.0.0.1/24, only the last segment (1.0.0.1~255) will be randomly selected. If you want to test all IPs in that range, please add the -allip parameter.
 ```
 
 </details>
