@@ -185,17 +185,17 @@ To avoid misunderstanding the **output content during the speed test process (av
 ``` bash
 # XIU2/CloudflareScanner vX.X.X
 
-开始延迟测速（模式：TCP, 端口：443, 范围：40 ~ 150 ms, 丢包：1.00)
-321 / 321 [----------------------------------------------------------------------------------] 可用: 30
-开始下载测速（下限：1.00 MB/s, 数量：5, 队列：10）
+Delay testing started (mode: TCP, port: 443, range: 40 ~ 150 ms, loss: 1.00)
+321 / 321 [----------------------------------------------------------------------------------] Available: 30
+Download speed testing started (lower limit: 1.00 MB/s, quantity: 5, queue: 10)
 3 / 5 [---------------------------------------------------------↗---------------------------]
-IP 地址           已发送  已接收  丢包率  平均延迟  下载速度 (MB/s)
-XXX.XXX.XXX.XXX   4       4      0.00    83.32    3.66
-XXX.XXX.XXX.XXX   4       4      0.00    107.81   2.49
-XXX.XXX.XXX.XXX   4       3      0.25    149.59   1.04
+IP Address        Sent    Received    Loss Rate    Avg Latency    Download Speed (MB/s)
+XXX.XXX.XXX.XXX   4       4           0.00         83.32          3.66
+XXX.XXX.XXX.XXX   4       4           0.00         107.81         2.49
+XXX.XXX.XXX.XXX   4       3           0.25         149.59         1.04
 
-完整测速结果已写入 result.csv 文件，可使用记事本/表格软件查看。
-按下 回车键 或 Ctrl+C 退出。
+Complete test results have been written to the result.csv file, which can be viewed using Notepad/spreadsheet software.
+Press Enter or Ctrl+C to exit.
 ```
 
 ****
