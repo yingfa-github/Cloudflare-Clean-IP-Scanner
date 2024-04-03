@@ -612,9 +612,9 @@ CloudflareScanner.exe -f 1.txt
 For convenience, I write the version number into the version variable in the code when compiling, so when you compile manually, you need to add it as follows:`go build`Add after the command`-ldflags`Parameter to specify the version number:
 
 ```bash
-# Run this command in the CloudflareScanner directory via the command line (e.g., CMD, Bat script) to compile a binary executable program that can run in an environment with the same system, bitness, and architecture as the current device (Go will automatically detect your system bitness and architecture), and the version number will be v2.3.3.
+# Run this command in the CloudflareScanner directory via the command line (e.g., CMD, Bat script) to compile a binary executable program that can run in an environment with the same system, bitness, and architecture as the current device (Go will automatically detect your system bitness and architecture), and the version number will be v2.2.5.
 
-go build -ldflags "-s -w -X main.version=v2.3.3"
+go build -ldflags "-s -w -X main.version=v2.2.5"
 ```
 
 If you want to compile under Windows 64-bit system**Other systems, architectures, bits**, then you need to specify**GOOS**and**GOARCH**variable.
@@ -624,7 +624,7 @@ For example, under Windows system, compile a program suitable for**Linux system 
 ```bat
 SET GOOS=linux
 SET GOARCH=amd64
-go build -ldflags "-s -w -X main.version=v2.3.3"
+go build -ldflags "-s -w -X main.version=v2.2.5"
 ```
 
 For example, under Linux system, compile a program suitable for**Windows system amd architecture 32 bit**Binary program for:
@@ -632,7 +632,7 @@ For example, under Linux system, compile a program suitable for**Windows system 
 ```bash
 GOOS=windows
 GOARCH=386
-go build -ldflags "-s -w -X main.version=v2.3.3"
+go build -ldflags "-s -w -X main.version=v2.2.5"
 ```
 
 > Can run`go tool dist list`to see which combinations the current Go version supports compiling.
@@ -644,7 +644,7 @@ At the same time, if you want to compile in batches, you need to put them in dif
 
 ```bat
 :: For Windows system：
-SET version=v2.3.3
+SET version=v2.2.5
 SET GOOS=linux
 SET GOARCH=amd64
 go build -o Releases\CloudflareScanner_linux_amd64\CloudflareScanner -ldflags "-s -w -X main.version=%version%"
@@ -652,7 +652,7 @@ go build -o Releases\CloudflareScanner_linux_amd64\CloudflareScanner -ldflags "-
 
 ```bash
 # For Linux system：
-version=v2.3.3
+version=v2.2.5
 GOOS=windows
 GOARCH=386
 go build -o Releases/CloudflareScanner_windows_386/CloudflareScanner.exe -ldflags "-s -w -X main.version=${version}"
