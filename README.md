@@ -631,12 +631,6 @@ If no similar question is found, please open a new one[**Issues**](https://githu
 
 * * *
 
-## Appreciate the support
-
-![微信赞赏](https://github.com/Ptechgithub/Ptechgithub/blob/master/img/zs-01.png)![支付宝赞赏](https://github.com/Ptechgithub/Ptechgithub/blob/master/img/zs-02.png)
-
-* * *
-
 ## Manual compilation
 
 <details>
