@@ -101,7 +101,7 @@ The first line of the speed test result is**The fastest IP with the fastest down
 
 The complete results are saved in the current directory`result.csv`file, use**Notepad/sheet software**Open, the format is as follows:
 
-    IP 地址, 已发送, 已接收, 丢包率, 平均延迟, 下载速度 (MB/s)
+    IP Address, Sent, Received, Loss Rate, Average Latency, Download Speed (MB/s)
     104.27.200.69,4,4,0.00,146.23,28.64
 
 > _You can view the complete results according to your own needs**Further filtering**, or take a look at the advanced usage**Specify filter criteria**！_
