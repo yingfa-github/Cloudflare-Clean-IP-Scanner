@@ -189,10 +189,10 @@ Starting latency test (mode: TCP, port: 443, range: 40 ~ 150 ms, loss: 1.00)
 321 / 321 [----------------------------------------------------------------------------------] Available: 30
 Starting download speed test (minimum: 1.00 MB/s, count: 5, queue: 10)
 3 / 5 [---------------------------------------------------------↗---------------------------]
-IP Address      Sent   Received Loss Rate    Avg Latency    Download Speed (MB/s)
-XXX.XXX.XXX.XXX   4         4      0.00    83.32    3.66
-XXX.XXX.XXX.XXX   4         4      0.00    107.81   2.49
-XXX.XXX.XXX.XXX   4         3      0.25    149.59   1.04
+IP Address      Sent   Received Loss Rate  Avg Latency    Download Speed (MB/s)
+XXX.XXX.XXX.XXX   4         4      0.00      83.32    3.66
+XXX.XXX.XXX.XXX   4         4      0.00      107.81   2.49
+XXX.XXX.XXX.XXX   4         3      0.25      149.59   1.04
 
 Full test results have been written to the result.csv file, which can be viewed using Notepad/spreadsheet software.
 Press Enter or Ctrl+C to exit.
