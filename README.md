@@ -622,15 +622,6 @@ You can watch this[**Issues**](https://github.com/Ptechgithub/CloudflareScanner/
 
 * * *
 
-## feedback
-
-If you encounter any problems, you can go first[**Issues**](https://github.com/Ptechgithub/CloudflareScanner/issues)、[Discussions](https://github.com/Ptechgithub/CloudflareScanner/discussions)Check here to see if anyone else has asked (remember to check it out)[**Closed**](https://github.com/Ptechgithub/CloudflareScanner/issues?q=is%3Aissue+is%3Aclosed)of).  
-If no similar question is found, please open a new one[**Issues**](https://github.com/Ptechgithub/CloudflareScanner/issues/new)Come tell me!
-
-> **Notice**！_and`反馈问题、功能建议`If it is irrelevant, please go to the project internal forum for discussion (above`💬 Discussions`_
-
-* * *
-
 ## Manual compilation
 
 <details>
