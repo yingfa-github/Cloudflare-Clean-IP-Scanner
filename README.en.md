@@ -455,7 +455,7 @@ CloudflareST.exe -tp 80 -url http://cdn.cloudflare.steamstatic.com/steam/apps/59
 
 * * *
 
-#### #Custom speed test address
+#### #Customized speed test address
 
 <details>
 <summary><code><strong>「 点击展开 查看内容 」</strong></code></summary>
@@ -543,8 +543,8 @@ CloudflareST.exe -tl 200 -sl 5.6 -dn 10
 > if**Didn't find one that met the speed**IP of the condition, then all IP speed test results will be output regardless of the condition (convenient for you to adjust the conditions the next time you test the speed).  
 > Therefore, it is recommended to test the speed without specifying conditions first to see what the average delay and download speed are, and avoid specifying conditions.**too low/too high**！
 
-> Because the IP segment exposed by Cloudflare is**Back-to-origin IP + Anycast IP**,and**Back to source IP**is unavailable, so the download speed test is 0.00.  
-> You can add it at runtime`-sl 0.01`(lower limit of download speed), filter out**Back to source IP**(Results of download speed test below 0.01MB/s).
+> Because the IP range exposed by Cloudflare is**Back-to-origin IP + Anycast IP**,and**Back to source IP**is unavailable, so the download speed test is 0.00.  
+> 运行时可以加上 `-sl 0.01`(lower limit of download speed), filter out**Back to source IP**(Results of download speed test below 0.01MB/s).
 
 </details>
 
