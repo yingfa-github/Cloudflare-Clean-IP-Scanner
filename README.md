@@ -59,9 +59,6 @@ chmod +x CloudflareScanner
 </details>
 
 * * *
-
-> _exist**cell phone**A simple tutorial to run the CloudflareScanner speed test independently on:**[Android](https://github.com/Ptechgithub/CloudflareScanner/discussions/61)、[Android APP](https://github.com/xianshenglu/cloudflare-ip-tester-app)、[IOS](https://github.com/Ptechgithub/CloudflareScanner/discussions/321)**_
-
 > Notice! This software only works on websites,**Preferred IP for Cloudflare WARP is not supported**, see for details:[#392](https://github.com/Ptechgithub/CloudflareScanner/discussions/392)
 
 ### Example of results
