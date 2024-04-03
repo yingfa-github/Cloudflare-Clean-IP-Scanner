@@ -13,7 +13,7 @@ While Cloudflare exposes all[IP segment](https://www.cloudflare.com/ips/), but t
 
 ### Download and run
 
-1.  Download the compiled executable file ([Github Releases](https://github.com/Ptechgithub/CloudflareScanner/releases)/[Ptechgithub](https://pan.lanpw.com/b0742hkxe)) and unzip it.
+1.  Download the compiled executable file [Github Releases](https://github.com/Ptechgithub/CloudflareScanner/releases) and unzip it.
 2.  Double click to run`CloudflareScanner.exe`File (Windows system), waiting for the speed test to complete...
 
 <details>
