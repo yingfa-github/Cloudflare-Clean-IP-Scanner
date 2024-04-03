@@ -617,39 +617,6 @@ CloudflareST.exe -f 1.txt
 
 ****
 
-## 问题反馈
-
-如果你遇到什么问题，可以先去 [**Issues**](https://github.com/XIU2/CloudflareSpeedTest/issues)、[Discussions](https://github.com/XIU2/CloudflareSpeedTest/discussions) 里看看是否有别人问过了（记得去看下  [**Closed**](https://github.com/XIU2/CloudflareSpeedTest/issues?q=is%3Aissue+is%3Aclosed) 的）。  
-如果没找到类似问题，请新开个 [**Issues**](https://github.com/XIU2/CloudflareSpeedTest/issues/new) 来告诉我！
-
-> **注意**！_与 `反馈问题、功能建议` 无关的，请前往项目内部 论坛 讨论（上面的 `💬 Discussions`_  
-
-****
-
-## 赞赏支持
-
-![微信赞赏](https://github.com/XIU2/XIU2/blob/master/img/zs-01.png)![支付宝赞赏](https://github.com/XIU2/XIU2/blob/master/img/zs-02.png)
-
-****
-
-## 衍生项目
-
-- _https://github.com/xianshenglu/cloudflare-ip-tester-app_  
-_**CloudflareST 安卓版 APP [#202](https://github.com/XIU2/CloudflareSpeedTest/discussions/320)**_
-
-- _https://github.com/mingxiaoyu/luci-app-cloudflarespeedtest_  
-_**CloudflareST OpenWrt 路由器插件版 [#174](https://github.com/XIU2/CloudflareSpeedTest/discussions/319)**_
-
-- _https://github.com/immortalwrt-collections/openwrt-cdnspeedtest_  
-_**CloudflareST OpenWrt 原生编译版本 [#64](https://github.com/XIU2/CloudflareSpeedTest/discussions/64)**_
-
-- _https://github.com/hoseinnikkhah/CloudflareSpeedTest-English_  
-_**English language version of CloudflareST (Text language differences only) [#64](https://github.com/XIU2/CloudflareSpeedTest/issues/68)**_
-
-> _此处仅收集了在本项目中宣传过的部分 CloudflareST 相关衍生项目，如果有遗漏可以告诉我~_
-
-****
-
 ## 感谢项目
 
 - _https://github.com/Spedoske/CloudflareScanner_
