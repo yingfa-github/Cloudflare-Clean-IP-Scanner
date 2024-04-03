@@ -200,8 +200,7 @@ Press Enter or Ctrl+C to exit.
 
 ****
 
-> 刚接触 CloudflareST 的人，可能会迷惑**明明延迟测速可用 IP 有 30 个，怎么最后只剩下 3 个了呢？**  
-> 下载测速里的队列又是什么意思？难道我下载测速还要排队？
+> For those who are new to CloudflareST, they might be confused: **"There were originally 30 usable IPs for latency testing, why are there only 3 left now?"** What does the queue in the download speed test mean? Do I have to wait in line for the download speed test as well?
 
 CloudflareST 会先延迟测速，在这过程中进度条右侧会实时显示可用 IP 数量（`可用: 30`），但注意该可用数量指的是**测试通过没有超时的 IP 数量**，和延迟上下限、丢包条件无关。当延迟测速完成后，因为还指定了**延迟上下限、丢包**的条件，所以按照条件过滤后只剩下 `10` 个了（也就是等待下载测速的 `队列：10`）。
 
