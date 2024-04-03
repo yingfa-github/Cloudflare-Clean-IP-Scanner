@@ -9,7 +9,7 @@
 
 ### Download and Run
 
-1. Download the precompiled executable file ([Github Releases](https://github.com/XIU2/CloudflareSpeedTest/releases) / [蓝奏云](https://pan.lanpw.com/b0742hkxe)) and unzip it.
+1. Download the precompiled executable file ([Github Releases](https://github.com/XIU2/CloudflareScanner/releases) / [蓝奏云](https://pan.lanpw.com/b0742hkxe)) and unzip it.
 2. Double click on the `CloudflareST.exe` file (for Windows), and wait for the speed test to complete...
 
 <details>
@@ -17,7 +17,7 @@
 
 ****
 
-The following commands are for demonstration purposes only. Please visit [**Releases**](https://github.com/XIU2/CloudflareSpeedTest/releases) to check the version number and file names.
+The following commands are for demonstration purposes only. Please visit [**Releases**](https://github.com/XIU2/CloudflareScanner/releases) to check the version number and file names.
 
 ``` yaml
 # If this is your first time using, it's recommended to create a new folder (skip this step for future updates)
@@ -27,13 +27,13 @@ mkdir CloudflareST
 cd CloudflareST
 
 # Download the CloudflareST compressed file (replace [version number] and [file name] in the URL according to your needs)
-wget -N https://github.com/XIU2/CloudflareSpeedTest/releases/download/v2.2.5/CloudflareST_linux_amd64.tar.gz
+wget -N https://github.com/XIU2/CloudflareScanner/releases/download/v2.2.5/CloudflareST_linux_amd64.tar.gz
 # If you're downloading in a Chinese network environment, consider using one of these mirrors for acceleration:
-# wget -N https://download.scholar.rr.nu/XIU2/CloudflareSpeedTest/releases/download/v2.2.5/CloudflareST_linux_amd64.tar.gz
-# wget -N https://ghproxy.cc/https://github.com/XIU2/CloudflareSpeedTest/releases/download/v2.2.5/CloudflareST_linux_amd64.tar.gz
-# wget -N https://ghproxy.net/https://github.com/XIU2/CloudflareSpeedTest/releases/download/v2.2.5/CloudflareST_linux_amd64.tar.gz
-# wget -N https://gh-proxy.com/https://github.com/XIU2/CloudflareSpeedTest/releases/download/v2.2.5/CloudflareST_linux_amd64.tar.gz
-# wget -N https://mirror.ghproxy.com/https://github.com/XIU2/CloudflareSpeedTest/releases/download/v2.2.5/CloudflareST_linux_amd64.tar.gz
+# wget -N https://download.scholar.rr.nu/XIU2/CloudflareScanner/releases/download/v2.2.5/CloudflareST_linux_amd64.tar.gz
+# wget -N https://ghproxy.cc/https://github.com/XIU2/CloudflareScanner/releases/download/v2.2.5/CloudflareST_linux_amd64.tar.gz
+# wget -N https://ghproxy.net/https://github.com/XIU2/CloudflareScanner/releases/download/v2.2.5/CloudflareST_linux_amd64.tar.gz
+# wget -N https://gh-proxy.com/https://github.com/XIU2/CloudflareScanner/releases/download/v2.2.5/CloudflareST_linux_amd64.tar.gz
+# wget -N https://mirror.ghproxy.com/https://github.com/XIU2/CloudflareScanner/releases/download/v2.2.5/CloudflareST_linux_amd64.tar.gz
 # If the download fails, try removing the -N parameter (if it's for an update, remember to delete the old compressed file beforehand: rm CloudflareST_linux_amd64.tar.gz)
 
 # Extract (no need to delete old files, they will be overwritten directly; replace the file name according to your needs)
@@ -56,9 +56,9 @@ chmod +x CloudflareST
 
 ****
 
-> _A simple tutorial on how to independently run CloudflareST speed test on **mobile devices**: **[Android](https://github.com/XIU2/CloudflareSpeedTest/discussions/61)**, **[Android APP](https://github.com/xianshenglu/cloudflare-ip-tester-app)**, **[iOS](https://github.com/XIU2/CloudflareSpeedTest/discussions/321)**_
+> _A simple tutorial on how to independently run CloudflareST speed test on **mobile devices**: **[Android](https://github.com/XIU2/CloudflareScanner/discussions/61)**, **[Android APP](https://github.com/xianshenglu/cloudflare-ip-tester-app)**, **[iOS](https://github.com/XIU2/CloudflareScanner/discussions/321)**_
 
-> Note! This software is only applicable to websites and **does not support selecting Cloudflare WARP preferred IPs**. For details, see: [#392](https://github.com/XIU2/CloudflareSpeedTest/discussions/392)
+> Note! This software is only applicable to websites and **does not support selecting Cloudflare WARP preferred IPs**. For details, see: [#392](https://github.com/XIU2/CloudflareScanner/discussions/392)
 
 ### Example Results
 
@@ -115,9 +115,9 @@ IP Address, Sent, Received, Loss Rate, Avg Latency, Download Speed (MB/s)
 ```css
 C:\>CloudflareST.exe -h
 
-CloudflareSpeedTest vX.X.X
+CloudflareScanner vX.X.X
 Test the latency and speed of all IPs of Cloudflare CDN, and obtain the fastest IP (IPv4+IPv6)!
-https://github.com/XIU2/CloudflareSpeedTest
+https://github.com/XIU2/CloudflareScanner
 
 Options:
     -n 200
@@ -183,7 +183,7 @@ Options:
 > 该实例把常用参数都给加上了，即为：`-ttl 40 -tl 150 -sl 1 -dn 5`，最后输出结果如下：
 
 ``` bash
-# XIU2/CloudflareSpeedTest vX.X.X
+# XIU2/CloudflareScanner vX.X.X
 
 开始延迟测速（模式：TCP, 端口：443, 范围：40 ~ 150 ms, 丢包：1.00)
 321 / 321 [----------------------------------------------------------------------------------] 可用: 30
@@ -322,7 +322,7 @@ CloudflareST.exe -f ipv6.txt
 CloudflareST.exe -ip 1.1.1.1,2606:4700::/32
 ```
 
-> 测速 IPv6 时，可能会注意到每次测速数量都不一样，了解原因： [#120](https://github.com/XIU2/CloudflareSpeedTest/issues/120)  
+> 测速 IPv6 时，可能会注意到每次测速数量都不一样，了解原因： [#120](https://github.com/XIU2/CloudflareScanner/issues/120)  
 > 因为 IPv6 太多（以亿为单位），且绝大部分 IP 段压根未启用，所以我只扫了一部分可用的 IPv6 段写到 `ipv6.txt` 文件中，有兴趣的可以自行扫描增删，ASN 数据源来自：[bgp.he.net](https://bgp.he.net/AS13335#_prefixes6)
 
 </details>
@@ -605,7 +605,7 @@ CloudflareST.exe -f 1.txt
 
 我以前说过，开发该软件项目的目的就是为了通过**改 Hosts 的方式来加速访问使用 Cloudflare CDN 的网站**。
 
-但就如 [**#8**](https://github.com/XIU2/CloudflareSpeedTest/issues/8) 所说，一个个添加域名到 Hosts 实在**太麻烦**了，于是我就找到了个**一劳永逸**的办法！可以看这个 [**还在一个个添加 Hosts？完美本地加速所有使用 Cloudflare CDN 的网站方法来了！**](https://github.com/XIU2/CloudflareSpeedTest/discussions/71) 和另一个[依靠本地 DNS 服务来修改域名解析 IP 为自选 IP](https://github.com/XIU2/CloudflareSpeedTest/discussions/317) 的教程。
+但就如 [**#8**](https://github.com/XIU2/CloudflareScanner/issues/8) 所说，一个个添加域名到 Hosts 实在**太麻烦**了，于是我就找到了个**一劳永逸**的办法！可以看这个 [**还在一个个添加 Hosts？完美本地加速所有使用 Cloudflare CDN 的网站方法来了！**](https://github.com/XIU2/CloudflareScanner/discussions/71) 和另一个[依靠本地 DNS 服务来修改域名解析 IP 为自选 IP](https://github.com/XIU2/CloudflareScanner/discussions/317) 的教程。
 
 ****
 
@@ -613,7 +613,7 @@ CloudflareST.exe -f 1.txt
 
 考虑到很多人获得最快 Cloudflare CDN IP 后，需要替换 Hosts 文件中的 IP。
 
-可以看这个 [**Issues**](https://github.com/XIU2/CloudflareSpeedTest/discussions/312) 获取 **Windows/Linux 自动更新 Hosts 脚本**！
+可以看这个 [**Issues**](https://github.com/XIU2/CloudflareScanner/discussions/312) 获取 **Windows/Linux 自动更新 Hosts 脚本**！
 
 ****
 
@@ -637,7 +637,7 @@ CloudflareST.exe -f 1.txt
 
 ```bash
 go build -ldflags "-s -w -X main.version=v2.3.3"
-# 在 CloudflareSpeedTest 目录中通过命令行（例如 CMD、Bat 脚本）运行该命令，即可编译一个可在和当前设备同样系统、位数、架构的环境下运行的二进制程序（Go 会自动检测你的系统位数、架构）且版本号为 v2.3.3
+# 在 CloudflareScanner 目录中通过命令行（例如 CMD、Bat 脚本）运行该命令，即可编译一个可在和当前设备同样系统、位数、架构的环境下运行的二进制程序（Go 会自动检测你的系统位数、架构）且版本号为 v2.3.3
 ```
 
 如果想要在 Windows 64位系统下编译**其他系统、架构、位数**，那么需要指定 **GOOS** 和 **GOARCH** 变量。
