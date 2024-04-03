@@ -66,7 +66,7 @@ chmod +x CloudflareScanner
 After the speed test is completed, it will be displayed by default**Fastest 10 IPs**, example:
 
 ```bash
-IP Address      Sent  Received    Loss Rate    Avg Latency    Download Speed (MB/s)
+IP Address      Sent  Received  Loss-Rate  Avg-Latency  Download Speed (MB/s)
 104.27.200.69     4       4       0.00    146.23    28.64
 172.67.60.78      4       4       0.00    139.82    15.02
 104.25.140.153    4       4       0.00    146.49    14.90
