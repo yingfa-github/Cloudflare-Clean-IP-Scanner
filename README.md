@@ -231,7 +231,7 @@ Because as long as you specify`-sl`parameters, then as long as there are not eno
 
 In addition, if all queue IPs have been tested for speed, but there is no IP that meets the download speed conditions, then it will**Directly output the download speed test results of all queue IPs**, so that you can see the download speeds of these IPs, and you can know them in your mind, and then**Adjust it appropriately`-sl`try again**。
 
-Similarly, in terms of delayed speed measurement,`可用: 30`、`queue：10`These two values ​​​​can also let you know whether the delay conditions you set are too harsh for you. If there are a lot of available IPs, but only 2 or 3 are left after conditional filtering, it goes without saying that you need**Adjust down expected latency/packet loss conditions**.
+Similarly, in terms of delayed speed measurement,`Available: 30`、`queue：10`These two values ​​​​can also let you know whether the delay conditions you set are too harsh for you. If there are a lot of available IPs, but only 2 or 3 are left after conditional filtering, it goes without saying that you need**Adjust down expected latency/packet loss conditions**.
 
 Of these two mechanisms, one tells you**Delayed packet loss conditions**Whether it is appropriate or not, one will tell you**Download speed conditions**Is it appropriate.
 
