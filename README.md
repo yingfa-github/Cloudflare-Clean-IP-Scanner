@@ -116,59 +116,59 @@ The default parameters are used for direct operation. If you want the speed meas
 C:\>CloudflareScanner.exe -h
 
 CloudflareScanner vX.X.X
-测试 Cloudflare CDN 所有 IP 的延迟和速度，获取最快 IP (IPv4+IPv6)！
+Test the latency and speed of all IP addresses of Cloudflare CDN to obtain the fastest IP (IPv4+IPv6)!
 https://github.com/Ptechgithub/CloudflareScanner
 
-参数：
+Options:
     -n 200
-        延迟测速线程；越多延迟测速越快，性能弱的设备 (如路由器) 请勿太高；(默认 200 最多 1000)
+        Latency test threads; more threads result in faster latency testing, but devices with weak performance (such as routers) should not set it too high; (default 200, maximum 1000)
     -t 4
-        延迟测速次数；单个 IP 延迟测速的次数；(默认 4 次)
+        Latency test count; number of times each IP's latency is tested; (default 4 times)
     -dn 10
-        下载测速数量；延迟测速并排序后，从最低延迟起下载测速的数量；(默认 10 个)
+        Download test count; number of IPs to download speed test after latency testing and sorting, starting from the lowest latency; (default 10)
     -dt 10
-        下载测速时间；单个 IP 下载测速最长时间，不能太短；(默认 10 秒)
+        Download test time; maximum download test time for each IP, should not be too short; (default 10 seconds)
     -tp 443
-        指定测速端口；延迟测速/下载测速时使用的端口；(默认 443 端口)
+        Specify test port; port used for latency testing/download testing; (default port 443)
     -url https://cf.xiu2.xyz/url
-        指定测速地址；延迟测速(HTTPing)/下载测速时使用的地址，默认地址不保证可用性，建议自建；
+        Specify test URL; URL used for latency testing (HTTPing)/download testing, default URL not guaranteed to be available, it is recommended to use a self-built one;
 
     -httping
-        切换测速模式；延迟测速模式改为 HTTP 协议，所用测试地址为 [-url] 参数；(默认 TCPing)
-        注意：HTTPing 本质上也算一种 网络扫描 行为，因此如果你在服务器上面运行，需要降低并发(-n)，否则可能会被一些严格的商家暂停服务。
-        如果你遇到 HTTPing 首次测速可用 IP 数量正常，后续测速越来越少甚至直接为 0，但停一段时间后又恢复了的情况，那么也可能是被 运营商、Cloudflare CDN 认为你在网络扫描而 触发临时限制机制，因此才会过一会儿就恢复了，建议降低并发(-n)减少这种情况的发生。
+        Switch test mode; switch latency test mode to HTTP protocol, using the test address specified by [-url] parameter; (default TCPing)
+        Note: HTTPing is essentially a form of network scanning behavior, so if you are running it on a server, you need to reduce concurrency (-n), otherwise some strict merchants may suspend service.
+        If you encounter a situation where the number of IPs available for HTTPing latency testing is normal at first, but decreases in subsequent tests or even becomes 0, but then recovers after a while, it may also be due to temporary restrictions triggered by the ISP or Cloudflare CDN due to network scanning behavior, it is recommended to reduce concurrency (-n) to reduce the occurrence of such situations.
     -httping-code 200
-        有效状态代码；HTTPing 延迟测速时网页返回的有效 HTTP 状态码，仅限一个；(默认 200 301 302)
+        Valid status codes; valid HTTP status codes returned when latency testing with HTTPing, limited to one; (default 200 301 302)
     -cfcolo HKG,KHH,NRT,LAX,SEA,SJC,FRA,MAD
-        匹配指定地区；地区名为当地机场三字码，英文逗号分隔，支持小写，支持 Cloudflare、AWS CloudFront，仅 HTTPing 模式可用；(默认 所有地区)
+        Match specified locations; location names are three-letter airport codes, separated by commas, case-insensitive, supports Cloudflare, AWS CloudFront, only available in HTTPing mode; (default all locations)
 
     -tl 200
-        平均延迟上限；只输出低于指定平均延迟的 IP，各上下限条件可搭配使用；(默认 9999 ms)
+        Upper limit of average latency; only output IPs with latency lower than the specified value, upper and lower limit conditions can be used together; (default 9999 ms)
     -tll 40
-        平均延迟下限；只输出高于指定平均延迟的 IP；(默认 0 ms)
+        Lower limit of average latency; only output IPs with latency higher than the specified value; (default 0 ms)
     -tlr 0.2
-        丢包几率上限；只输出低于/等于指定丢包率的 IP，范围 0.00~1.00，0 过滤掉任何丢包的 IP；(默认 1.00)
+        Upper limit of loss rate; only output IPs with loss rate lower than/equal to the specified value, range 0.00~1.00, 0 filters out any IPs with loss; (default 1.00)
     -sl 5
-        下载速度下限；只输出高于指定下载速度的 IP，凑够指定数量 [-dn] 才会停止测速；(默认 0.00 MB/s)
+        Lower limit of download speed; only output IPs with download speed higher than the specified value, will stop testing when the specified number [-dn] is reached; (default 0.00 MB/s)
 
     -p 10
-        显示结果数量；测速后直接显示指定数量的结果，为 0 时不显示结果直接退出；(默认 10 个)
+        Number of results to display; directly display the specified number of results after testing, when set to 0, results will not be displayed and the program will exit directly; (default 10)
     -f ip.txt
-        IP段数据文件；如路径含有空格请加上引号；支持其他 CDN IP段；(默认 ip.txt)
+        IP range data file; if the path contains spaces, please enclose it in quotes; supports other CDN IP ranges; (default ip.txt)
     -ip 1.1.1.1,2.2.2.2/24,2606:4700::/32
-        指定IP段数据；直接通过参数指定要测速的 IP 段数据，英文逗号分隔；(默认 空)
+        Specify IP range data; directly specify the IP range data to be tested through parameters, separated by commas; (default empty)
     -o result.csv
-        写入结果文件；如路径含有空格请加上引号；值为空时不写入文件 [-o ""]；(默认 result.csv)
+        Write result to file; if the path contains spaces, please enclose it in quotes; set to empty [-o ""] to not write to file; (default result.csv)
 
     -dd
-        禁用下载测速；禁用后测速结果会按延迟排序 (默认按下载速度排序)；(默认 启用)
+        Disable download speed test; after disabling, the test results will be sorted by latency (default sorted by download speed); (default enabled)
     -allip
-        测速全部的IP；对 IP 段中的每个 IP (仅支持 IPv4) 进行测速；(默认 每个 /24 段随机测速一个 IP)
+        Test all IPs; test each IP in the IP range (IPv4 only); (default randomly test one IP from each /24 range)
 
     -v
-        打印程序版本 + 检查版本更新
+        Print program version + check for updates
     -h
-        打印帮助说明
+        Print help information
 ```
 
 ### Interface explanation
