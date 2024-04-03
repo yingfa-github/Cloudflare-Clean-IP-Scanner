@@ -446,12 +446,12 @@ C:\abc\CloudflareScanner.exe -f C:\abc\4.txt -o C:\abc\result.csv -dd
 * * *
 
 ```bash
-# 如果你想要测速非默认 443 的其他端口，则需要通过 -tp 参数指定（该参数会影响 延迟测速/下载测速 时使用的端口）
+# If you want to test ports other than the default 443, you need to specify them through the -tp parameter (this parameter will affect the port used during latency testing/download testing).
 
-# 如果要延迟测速 80 端口+下载测速（如果 -dd 禁用了下载测速则不需要），那么还需要指定 http:// 协议的下载测速地址才行（且该地址不会强制重定向至 HTTPS，因为那样就变成 443 端口了）
+# If you want to latency test port 80 + download speed (if -dd disables download speed testing, it is not necessary), then you also need to specify an http:// protocol download speed test address (and this address will not be forcibly redirected to HTTPS, because that would become port 443).
 CloudflareScanner.exe -tp 80 -url http://cdn.cloudflare.steamstatic.com/steam/apps/5952/movie_max.webm
 
-# 如果是非 80 443 的其他端口，那么需要确定你使用的下载测速地址是否支持通过该非标端口访问。
+# If it is a port other than 80 or 443, you need to make sure that the download test address you are using supports access through that non-standard port.
 ```
 
 </details>
