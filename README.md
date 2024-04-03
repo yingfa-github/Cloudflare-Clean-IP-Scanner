@@ -9,7 +9,7 @@ While Cloudflare exposes all[IP segment](https://www.cloudflare.com/ips/), but t
 
 * * *
 
-## #Quick to use
+### Quick to use
 
 ### Download and run
 
