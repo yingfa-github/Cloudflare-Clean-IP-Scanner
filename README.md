@@ -466,12 +466,12 @@ CloudflareScanner.exe -tp 80 -url http://cdn.cloudflare.steamstatic.com/steam/ap
 * * *
 
 ```bash
-# 该参数适用于下载测速 及 HTTP 协议的延迟测速，对于后者该地址可以是任意网页 URL（不局限于具体文件地址）
+# This parameter is applicable to download speed testing and HTTP protocol latency testing, for the latter, the address can be any webpage URL (not limited to specific file addresses).
 
-# 地址要求：可以直接下载、文件大小超过 200MB、用的是 Cloudflare CDN
+# Address requirements: directly downloadable, file size exceeds 200MB, using Cloudflare CDN
 CloudflareScanner.exe -url https://cf.xiu2.xyz/url
 
-# 注意：如果测速地址为 HTTP 协议（该地址不能强制重定向至 HTTPS），记得加上 -tp 80（这个参数会影响 延迟测速/下载测速 时使用的端口），如果是非 80 443 端口，那么需要确定下载测速地址是否支持通过该端口访问。
+# Note: If the test address is using the HTTP protocol (this address cannot be forcibly redirected to HTTPS), remember to add -tp 80 (this parameter will affect the port used during latency testing/download testing). If it is a non-80 or 443 port, make sure the download test address supports access through that port.
 CloudflareScanner.exe -tp 80 -url http://cdn.cloudflare.steamstatic.com/steam/apps/5952/movie_max.webm
 ```
 
