@@ -608,10 +608,10 @@ CloudflareST.exe -f 1.txt
 但就如 [**#8**](https://github.com/Ptechgithub/CloudflareScanner/issues/8) 所说，一个个添加域名到 Hosts 实在**太麻烦**了，于是我就找到了个**一劳永逸**的办法！可以看这个 [**还在一个个添加 Hosts？完美本地加速所有使用 Cloudflare CDN 的网站方法来了！**](https://github.com/Ptechgithub/CloudflareScanner/discussions/71) 和另一个[依靠本地 DNS 服务来修改域名解析 IP 为自选 IP](https://github.com/Ptechgithub/CloudflareScanner/discussions/317) 的教程。
 
 ****
-## 手动编译
+## Manual Compilation
 
 <details>
-<summary><code><strong>「 点击展开 查看内容 」</strong></code></summary>
+<summary><code><strong>「 Click to expand to view content 」</strong></code></summary>
 
 ****
 
