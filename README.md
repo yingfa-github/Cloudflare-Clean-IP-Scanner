@@ -248,31 +248,30 @@ On Windows, to specify parameters, you need to run them in CMD, or add the param
 
 ****
 
-#### \# CMD 带参数运行 CloudflareST
+#### Running CloudflareST with Parameters in CMD
 
-对命令行程序不熟悉的人，可能不知道该如何带参数运行，我就简单说一下。
+For those unfamiliar with command-line programs, you may not know how to run them with parameters, so I'll explain briefly.
 
 <details>
-<summary><code><strong>「 点击展开 查看内容 」</strong></code></summary>
+<summary><code><strong>「 Click to Expand and View Content 」</strong></code></summary>
 
 ****
 
-很多人打开 CMD 以**绝对路径**运行 CloudflareST 会报错，这是因为默认的 `-f ip.txt` 参数是相对路径，需要指定绝对路径的 ip.txt 才行，但这样毕竟太麻烦了，因此还是建议进入 CloudflareST 程序目录下，以**相对路径**方式运行：
+Many people encounter errors when running CloudflareST with **absolute paths** in CMD. This is because the default `-f ip.txt` parameter uses a relative path, so you need to specify the absolute path to `ip.txt`. However, this can be cumbersome, so it's recommended to run CloudflareST in its program directory using **relative paths**:
 
-**方式 一**：
-1. 打开 CloudflareST 程序所在目录  
-2. 空白处按下 <kbd>Shift + 鼠标右键</kbd> 显示右键菜单  
-3. 选择 **\[在此处打开命令窗口\]** 来打开 CMD 窗口，此时默认就位于当前目录下  
-4. 输入带参数的命令，如：`CloudflareST.exe -tll 50 -tl 200`即可运行
+**Method 1**:
+1. Open the directory where CloudflareST is located.
+2. Right-click on a blank space and select **\[Open command window here\]** from the context menu by pressing <kbd>Shift + Right Click</kbd>, which will open CMD with the current directory.
+3. Enter the command with parameters, such as: `CloudflareST.exe -tll 50 -tl 200` to run the program.
 
-**方式 二**：
-1. 打开 CloudflareST 程序所在目录  
-2. 直接在文件夹地址栏中全选并输入 `cmd` 回车来打开 CMD 窗口，此时默认就位于当前目录下  
-4. 输入带参数的命令，如：`CloudflareST.exe -tll 50 -tl 200`即可运行
+**Method 2**:
+1. Open the directory where CloudflareST is located.
+2. Directly type `cmd` in the address bar of the folder and press Enter to open CMD with the current directory.
+3. Enter the command with parameters, such as: `CloudflareST.exe -tll 50 -tl 200` to run the program.
 
-> 当然你也可以随便打开一个 CMD 窗口，然后输入如 `cd /d "D:\Program Files\CloudflareST"` 来进入程序目录
+> Of course, you can also open any CMD window and then enter a command like `cd /d "D:\Program Files\CloudflareST"` to enter the program directory.
 
-> **提示**：如果用的是 **PowerShell** 只需把命令中的 `CloudflareST.exe` 改为 `.\CloudflareST.exe` 即可。
+> **Tip**: If you're using **PowerShell**, simply change `CloudflareST.exe` in the command to `.\CloudflareST.exe`.
 
 </details>
 
