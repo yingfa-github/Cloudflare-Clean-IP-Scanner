@@ -66,7 +66,7 @@ chmod +x CloudflareScanner
 After the speed test is completed, it will be displayed by default**Fastest 10 IPs**, example:
 
 ```bash
-IP 地址           已发送  已接收  丢包率  平均延迟  下载速度 (MB/s)
+IP Address      Sent    Received    Loss Rate    Avg Latency    Download Speed (MB/s)
 104.27.200.69     4       4       0.00    146.23    28.64
 172.67.60.78      4       4       0.00    139.82    15.02
 104.25.140.153    4       4       0.00    146.49    14.90
@@ -79,22 +79,22 @@ IP 地址           已发送  已接收  丢包率  平均延迟  下载速度 
 172.67.58.91      4       4       0.00    140.19    9.14
 ...
 
-# 如果平均延迟非常低（如 0.xx），则说明 CloudflareScanner 测速时走了代理，请先关闭代理软件后再测速。
-# 如果在路由器上运行，请先关闭路由器内的代理（或将其排除），否则测速结果可能会不准确/无法使用。
+# If the average latency is very low (e.g., 0.xx), it indicates that CloudflareScanner is using a proxy during the speed test. Please disable any proxy software before conducting the test.
+# If running on a router, please disable any proxies within the router (or exclude them), otherwise the speed test results may be inaccurate/unusable.
 
-# 因为每次测速都是在每个 IP 段中随机 IP，所以每次的测速结果都不可能相同，这是正常的！
+# Because each speed test randomly selects an IP from each IP range, the results will vary each time, which is normal!
 
-# 注意！我发现电脑开机后第一次测速延迟会明显偏高（手动 TCPing 也一样），后续测速都正常
-# 因此建议大家开机后第一次正式测速前，先随便测几个 IP（无需等待延迟测速完成，只要进度条动了就可以直接关了）
+# Note! I found that after the computer boots up, the first speed test may have noticeably higher latency (manual TCPing is the same), but subsequent tests are normal.
+# Therefore, it is recommended that before conducting the first official speed test after booting up, randomly test a few IPs (no need to wait for the latency test to complete, just close it once the progress bar moves).
 
-# 软件在 默认参数 下的整个流程大概步骤：
-# 1. 延迟测速（默认 TCPing 模式，HTTPing 模式需要手动加上参数）
-# 2. 延迟排序（延迟 从低到高 排序并按条件过滤，不同丢包率会分开排序，因此可能会有一些延迟低但丢包的 IP 排到后面）
-# 3. 下载测速（从延迟最低的 IP 开始依次下载测速，默认测够 10 个就会停止）
-# 4. 速度排序（速度从高到低排序）
-# 5. 输出结果（通过参数控制是否输出到命令行(-p 0)或输出到文件(-o "")）
+# The entire process of the software under the default parameters:
+# 1. Latency test (default TCPing mode, HTTPing mode requires manual addition of parameters)
+# 2. Latency sorting (sorting latency from low to high and filtering according to conditions, different loss rates are sorted separately, so there may be some IPs with low latency but loss at the end)
+# 3. Download speed test (starting from the IP with the lowest latency, downloading speed tests one by one, the default stops after testing 10)
+# 4. Speed sorting (sorting speeds from high to low)
+# 5. Output results (control whether to output to the command line with parameters (-p 0) or output to a file (-o ""))
 
-# 注意：输出的结果文件 result.csv 通过微软 Excel 表格打开会中文乱码，这是正常的，其他表格软件/记事本都显示正常
+# Note: The result file result.csv will display Chinese garbled characters when opened with Microsoft Excel, which is normal. It displays normally in other spreadsheet software/notepad.
 ```
 
 The first line of the speed test result is**The fastest IP with the fastest download speed and lowest average latency**！
