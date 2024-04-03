@@ -180,7 +180,7 @@ To avoid misunderstanding the **output content during the speed test process (av
 
 ****
 
-> 该实例把常用参数都给加上了，即为：`-ttl 40 -tl 150 -sl 1 -dn 5`，最后输出结果如下：
+> The example adds commonly used parameters, which are: `-ttl 40 -tl 150 -sl 1 -dn 5`, and the final output result is as follows:
 
 ``` bash
 # XIU2/CloudflareScanner vX.X.X
