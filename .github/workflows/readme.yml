@@ -11,12 +11,12 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 12.x
-      # ISO Langusge Codes: https://cloud.google.com/translate/docs/languages  
+      # ISO Langusge Codes: https://cloud.google.com/translate/docs/languages
+        - name: Adding README - English
+        uses: dephraiim/translate-readme@main
+        with:
+          LANG: en
       - name: Adding README - Persian
         uses: dephraiim/translate-readme@main
         with:
           LANG: fa
-      - name: Adding README - English
-        uses: dephraiim/translate-readme@main
-        with:
-          LANG: en
