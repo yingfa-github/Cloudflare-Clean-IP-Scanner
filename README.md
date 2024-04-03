@@ -637,33 +637,6 @@ If no similar question is found, please open a new one[**Issues**](https://githu
 
 * * *
 
-## Derivative projects
-
--   _<https://github.com/xianshenglu/cloudflare-ip-tester-app>_  
-    _**CloudflareScanner Android APP[#202](https://github.com/Ptechgithub/CloudflareScanner/discussions/320)**_
-
--   _<https://github.com/mingxiaoyu/luci-app-CloudflareScanner>_  
-    _**CloudflareScanner OpenWrt router plug-in version[#174](https://github.com/Ptechgithub/CloudflareScanner/discussions/319)**_
-
--   _<https://github.com/immortalwrt-collections/openwrt-cdnspeedtest>_  
-    _**CloudflareScanner OpenWrt native compiled version[#64](https://github.com/Ptechgithub/CloudflareScanner/discussions/64)**_
-
--   _<https://github.com/hoseinnikkhah/CloudflareScanner-English>_  
-    _**English language version of CloudflareScanner (Text language differences only)[#64](https://github.com/Ptechgithub/CloudflareScanner/issues/68)**_
-
-> _Here we only collect some of the CloudflareScanner related derivative projects that have been promoted in this project. If there are any omissions, please let me know~_
-
-* * *
-
-## thanks project
-
--   _<https://github.com/Spedoske/CloudflareScanner>_
-
-> _Because the project has not been updated for a long time, and I have a lot of functional requirements, I temporarily learned the Go language and got started (dish)..._  
-> _This software is based on this project, but**A lot of features have been added and bugs fixed**, and actively add and optimize functions based on everyone's feedback (idle)..._
-
-* * *
-
 ## Manual compilation
 
 <details>
