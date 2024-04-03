@@ -20,7 +20,7 @@ var (
 func init() {
 	var printVersion bool
 	var help = `
-CloudflareSpeedTest ` + version + `
+CloudflareScanner ` + version + `
 Test the latency and speed of all IP addresses of Cloudflare CDN, and get the fastest IP (IPv4+IPv6)!
 https://github.com/Ptechgithub/CloudflareScanner
 
@@ -128,7 +128,7 @@ Options:
 func main() {
 	task.InitRandSeed() // Set random seed
 
-	fmt.Printf("# XIU2/CloudflareSpeedTest %s \n\n", version)
+	fmt.Printf("# Ptechgithub/CloudflareScanner %s \n\n", version)
 
 	// Start latency testing + filter delay/loss
 	pingData := task.NewPing().Run().FilterDelay().FilterLossRate()
