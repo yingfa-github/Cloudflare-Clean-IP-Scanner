@@ -179,7 +179,7 @@ https://github.com/Ptechgithub/CloudflareScanner
 In order to prevent everyone from being concerned about the speed measurement process,**The output content is misunderstood (available, queue and other numbers, the download speed test is "interrupted" halfway?)**, I explain specifically.
 
 <details>
-<summary><code><strong>"Click to expand view content"</strong></code></summary>
+<summary><code><strong>「 Click to expand view content 」</strong></code></summary>
 
 * * *
 
@@ -257,7 +257,7 @@ Windows To specify parameters you need to run in CMD, or add parameters to the s
 People who are not familiar with command line programs may not know how to run them with parameters, so I will briefly explain.
 
 <details>
-<summary><code><strong>"Click to expand view content"</strong></code></summary>
+<summary><code><strong>「 Click to expand view content 」</strong></code></summary>
 
 * * *
 
@@ -289,7 +289,7 @@ Many people open CMD to**absolute path**Running CloudflareScanner will report an
 If you don’t frequently modify the running parameters (for example, you usually just double-click to run), it is recommended to use the shortcut, which is more convenient.
 
 <details>
-<summary><code><strong>"Click to expand view content"</strong></code></summary>
+<summary><code><strong>「 Click to expand view content 」</strong></code></summary>
 
 * * *
 
@@ -312,7 +312,7 @@ D:\ABC\CloudflareScanner\CloudflareScanner.exe -n 500 -t 4 -dn 20 -dt 5 -o " "
 #### #IPv4/IPv6
 
 <details>
-<summary><code><strong>"Click to expand view content"</strong></code></summary>
+<summary><code><strong>「 Click to expand view content 」</strong></code></summary>
 
 * * *
 
@@ -338,7 +338,7 @@ CloudflareScanner.exe -ip 1.1.1.1,2606:4700::/32
 #### #HTTPing
 
 <details>
-<summary><code><strong>"Click to expand view content"</strong></code></summary>
+<summary><code><strong>「 Click to expand view content 」</strong></code></summary>
 
 * * *
 
@@ -374,7 +374,7 @@ CloudflareScanner.exe -httping -tp 80 -url http://cdn.cloudflare.steamstatic.com
 #### #Match the specified area (colo airport three-character code)
 
 <details>
-<summary><code><strong>"Click to expand view content"</strong></code></summary>
+<summary><code><strong>「 Click to expand view content 」</strong></code></summary>
 
 * * *
 
@@ -399,7 +399,7 @@ CloudflareScanner.exe -cfcolo HKG,KHH,NRT,LAX,SEA,SJC,FRA,MAD
 #### #File relative/absolute path
 
 <details>
-<summary><code><strong>"Click to expand view content"</strong></code></summary>
+<summary><code><strong>「 Click to expand view content 」</strong></code></summary>
 
 * * *
 
@@ -445,7 +445,7 @@ C:\abc\CloudflareScanner.exe -f C:\abc\4.txt -o C:\abc\result.csv -dd
 #### #Test speed of other ports
 
 <details>
-<summary><code><strong>"Click to expand view content"</strong></code></summary>
+<summary><code><strong>「 Click to expand view content 」</strong></code></summary>
 
 * * *
 
@@ -465,7 +465,7 @@ CloudflareScanner.exe -tp 80 -url http://cdn.cloudflare.steamstatic.com/steam/ap
 #### #Custom speed test address
 
 <details>
-<summary><code><strong>"Click to expand view content"</strong></code></summary>
+<summary><code><strong>「 Click to expand view content 」</strong></code></summary>
 
 * * *
 
@@ -486,7 +486,7 @@ CloudflareScanner.exe -tp 80 -url http://cdn.cloudflare.steamstatic.com/steam/ap
 #### #Custom speed test conditions (specify the target range of latency/packet loss/download speed)
 
 <details>
-<summary><code><strong>"Click to expand view content"</strong></code></summary>
+<summary><code><strong>「 Click to expand view content 」</strong></code></summary>
 
 * * *
 
@@ -560,7 +560,7 @@ CloudflareScanner.exe -tl 200 -sl 5.6 -dn 10
 #### #Test the speed of one or multiple IPs individually
 
 <details>
-<summary><code><strong>"Click to expand view content"</strong></code></summary>
+<summary><code><strong>「 Click to expand view content 」</strong></code></summary>
 
 * * *
 
@@ -625,7 +625,7 @@ You can watch this[**Issues**](https://github.com/Ptechgithub/CloudflareScanner/
 ## Manual compilation
 
 <details>
-<summary><code><strong>"Click to expand view content"</strong></code></summary>
+<summary><code><strong>「 Click to expand view content 」</strong></code></summary>
 
 * * *
 
