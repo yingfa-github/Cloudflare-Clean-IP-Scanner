@@ -185,17 +185,17 @@ In order to prevent everyone from being concerned about the speed measurement pr
 ```bash
 # Ptechgithub/CloudflareScanner vX.X.X
 
-开始延迟测速（模式：TCP, 端口：443, 范围：40 ~ 150 ms, 丢包：1.00)
-321 / 321 [----------------------------------------------------------------------------------] 可用: 30
-开始下载测速（下限：1.00 MB/s, 数量：5, 队列：10）
+Starting latency test (mode: TCP, port: 443, range: 40 ~ 150 ms, loss: 1.00)
+321 / 321 [----------------------------------------------------------------------------------] Available: 30
+Starting download speed test (minimum: 1.00 MB/s, count: 5, queue: 10)
 3 / 5 [---------------------------------------------------------↗---------------------------]
-IP 地址           已发送  已接收  丢包率  平均延迟  下载速度 (MB/s)
+IP Address      Sent    Received    Loss Rate    Avg Latency    Download Speed (MB/s)
 XXX.XXX.XXX.XXX   4       4      0.00    83.32    3.66
 XXX.XXX.XXX.XXX   4       4      0.00    107.81   2.49
 XXX.XXX.XXX.XXX   4       3      0.25    149.59   1.04
 
-完整测速结果已写入 result.csv 文件，可使用记事本/表格软件查看。
-按下 回车键 或 Ctrl+C 退出。
+Full test results have been written to the result.csv file, which can be viewed using Notepad/spreadsheet software.
+Press Enter or Ctrl+C to exit.
 ```
 
 * * *
@@ -293,13 +293,13 @@ If you don’t frequently modify the running parameters (for example, you usuall
 Right click`CloudflareScanner.exe`document -**\[Create Shortcut]**, then right-click the shortcut -**\[Attributes]**, modify its**Target**：
 
 ```bash
-# 如果要不输出结果文件，那么请加上 -o " "，引号里的是空格（没有空格会导致该参数被省略）。
+# If you don't want to output the result file, please add -o " ", where the quotes contain a space (omitting the space will cause this parameter to be omitted).
 D:\ABC\CloudflareScanner\CloudflareScanner.exe -n 500 -t 4 -dn 20 -dt 5 -o " "
 
-# 如果文件路径包含引号，则需要把启动参数放在引号外面，记得引号和 - 之间有空格。
+# If the file path contains quotes, then the startup parameters need to be placed outside the quotes, make sure there is a space between the quotes and -.
 "D:\Program Files\CloudflareScanner\CloudflareScanner.exe" -n 500 -t 4 -dn 20 -dt 5 -o " "
 
-# 注意！快捷方式 - 起始位置 不能是空的，否则就会因为绝对路径而找不到 ip.txt 文件
+# Note! The starting position of the shortcut - cannot be empty, otherwise the ip.txt file will not be found due to the absolute path.
 ```
 
 </details>
