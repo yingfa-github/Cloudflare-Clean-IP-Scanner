@@ -375,15 +375,15 @@ CloudflareScanner.exe -httping -url https://cf.xiu2.xyz/url
 * * *
 
 ```bash
-# 该功能支持 Cloudflare CDN、AWS CloudFront CDN，且这两个 CDN 的机场三字码是通用的
-# 注意：如果你要用于筛选 AWS CloudFront CDN 地区，那么要通过 -url 参数指定一个使用该 CDN 的地址（因为软件默认地址是 Cloudflare 的）
+# This feature supports both Cloudflare CDN and AWS CloudFront CDN, and the three-letter airport codes for these two CDNs are interchangeable.
+# Note: If you want to use it to filter AWS CloudFront CDN regions, you need to specify an address using that CDN through the -url parameter (because the default address of the software is Cloudflare's).
 
-# 指定地区名后，延迟测速后得到的结果就都是指定地区的 IP 了（也可以继续进行下载测速）
-# 节点地区名为当地 机场三字码，指定多个时用英文逗号分隔，v2.2.3 版本后支持小写
+# After specifying the region name, the results obtained after latency testing will all be IPs from the specified region (you can also continue to perform download speed tests).
+# Node region names are three-letter airport codes, separated by commas when specifying multiple, lowercase letters are supported starting from version 2.2.3.
 
 CloudflareScanner.exe -cfcolo HKG,KHH,NRT,LAX,SEA,SJC,FRA,MAD
 
-# 注意，该参数只有在 HTTPing 延迟测速模式下才可用（因为要访问网页来获得）
+# Note that this parameter is only available in HTTPing latency testing mode (because it requires accessing web pages to obtain).
 ```
 
 > The two CDN airport three-character codes are common, so each region name is visible:<https://www.CloudflareScanneratus.com/>
@@ -400,37 +400,37 @@ CloudflareScanner.exe -cfcolo HKG,KHH,NRT,LAX,SEA,SJC,FRA,MAD
 * * *
 
 ```bash
-# 指定 IPv4 数据文件，不显示结果直接退出，输出结果到文件（-p 值为 0）
+# Specify IPv4 data file, do not display results and exit directly, output results to file (-p value is 0)
 CloudflareScanner.exe -f 1.txt -p 0 -dd
 
-# 指定 IPv4 数据文件，不输出结果到文件，直接显示结果（-p 值为 10 条，-o 值为空但引号不能少）
+# Specify IPv4 data file, do not output results to file, display results directly (-p value is 10, -o value is empty but quotes cannot be omitted)
 CloudflareScanner.exe -f 2.txt -o "" -p 10 -dd
 
-# 指定 IPv4 数据文件 及 输出结果到文件（相对路径，即当前目录下，如含空格请加上引号）
+# Specify IPv4 data file and output results to file (relative path, i.e., in the current directory, if it contains spaces, please enclose it in quotes)
 CloudflareScanner.exe -f 3.txt -o result.txt -dd
 
 
-# 指定 IPv4 数据文件 及 输出结果到文件（相对路径，即当前目录内的 abc 文件夹下，如含空格请加上引号）
-# Linux（CloudflareScanner 程序所在目录内的 abc 文件夹下）
+# Specify IPv4 data file and output results to file (relative path, i.e., in the abc folder in the current directory, if it contains spaces, please enclose it in quotes)
+# Linux (in the abc folder within the CloudflareScanner program directory)
 ./CloudflareScanner -f abc/3.txt -o abc/result.txt -dd
 
-# Windows（注意是反斜杠）
+# Windows (note the backslash)
 CloudflareScanner.exe -f abc\3.txt -o abc\result.txt -dd
 
 
-# 指定 IPv4 数据文件 及 输出结果到文件（绝对路径，即 C:\abc\ 目录下，如含空格请加上引号）
-# Linux（/abc/ 目录下）
+# Specify IPv4 data file and output results to file (absolute path, i.e., in the C:\abc\ directory, if it contains spaces, please enclose it in quotes)
+# Linux (in the /abc/ directory)
 ./CloudflareScanner -f /abc/4.txt -o /abc/result.csv -dd
 
-# Windows（注意是反斜杠）
+# Windows (note the backslash)
 CloudflareScanner.exe -f C:\abc\4.txt -o C:\abc\result.csv -dd
 
 
-# 如果要以【绝对路径】运行 CloudflareScanner，那么 -f / -o 参数中的文件名也必须是【绝对路径】，否则会报错找不到文件！
-# Linux（/abc/ 目录下）
+# If you want to run CloudflareScanner with an absolute path, then the filenames in the -f / -o parameters must also be absolute paths, otherwise an error will occur indicating that the file cannot be found!
+# Linux (in the /abc/ directory)
 /abc/CloudflareScanner -f /abc/4.txt -o /abc/result.csv -dd
 
-# Windows（注意是反斜杠）
+# Windows (note the backslash)
 C:\abc\CloudflareScanner.exe -f C:\abc\4.txt -o C:\abc\result.csv -dd
 ```
 
