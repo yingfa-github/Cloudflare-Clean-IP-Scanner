@@ -102,3 +102,11 @@ jobs:
           file: ./CloudflareScanner_${{ env.ASSET_NAME }}.zip*
           tag: ${{ github.ref }}
           file_glob: true
+          
+       - name: Send Telegram message
+         uses: svenstaro/telegram-message-action@v3
+         with:
+           to: ${{ secrets.TELEGRAM_CHAT_ID }}
+           token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+           message: "Hello from GitHub Actions! New version is available.(اپدیت جدید منتشر شد)"
+           
