@@ -101,4 +101,4 @@ jobs:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: ./CloudflareScanner_${{ env.ASSET_NAME }}.zip*
           tag: ${{ github.ref }}
-          file_glob: true          
+          file_glob: true  
