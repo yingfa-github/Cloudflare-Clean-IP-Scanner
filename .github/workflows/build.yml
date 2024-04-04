@@ -109,4 +109,3 @@ jobs:
            to: ${{ secrets.TELEGRAM_CHAT_ID }}
            token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
            message: "Hello from GitHub Actions! New version is available.(اپدیت جدید منتشر شد)"
-           
