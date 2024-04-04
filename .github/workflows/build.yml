@@ -11,31 +11,34 @@ jobs:
       contents: write
     strategy:
       fail-fast: false
-     matrix:
-      include:
-        - goos: darwin
-          goarch: amd64
-        - goos: darwin
-          goarch: arm64
-        - goos: android
-          goarch: arm64
-        - goos: linux
-          goarch: amd64
-        - goos: linux
-          goarch: arm64
-        - goos: linux
-          goarch: riscv64
-        - goos: linux
-          goarch: mips64
-        - goos: linux
-          goarch: mips64le
-        - goos: linux
-          goarch: arm
-          goarm: 7
-        - goos: windows
-          goarch: amd64
-        - goos: windows
-          goarch: arm64
+      matrix:
+        include:
+          - goos: darwin
+            goarch: amd64
+          - goos: darwin
+            goarch: arm64
+            
+          - goos: android
+            goarch: arm64
+            
+          - goos: linux
+            goarch: amd64
+          - goos: linux
+            goarch: arm64
+          - goos: linux
+            goarch: riscv64
+          - goos: linux
+            goarch: mips64
+          - goos: linux
+            goarch: mips64le
+          - goos: linux
+            goarch: arm
+            goarm: 7
+            
+          - goos: windows
+            goarch: amd64
+          - goos: windows
+            goarch: arm64
 
     runs-on: ubuntu-latest
     env:
@@ -98,11 +101,4 @@ jobs:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: ./CloudflareScanner_${{ env.ASSET_NAME }}.zip*
           tag: ${{ github.ref }}
-          file_glob: true
-          
-      - name: Send Telegram message
-        uses: svenstaro/telegram-message-action@v3
-        with:
-          to: ${{ secrets.TELEGRAM_CHAT_ID }}
-          token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          message: "Hello from GitHub Actions! New version is available.(اپدیت جدید منتشر شد)"
+          file_glob: true          
