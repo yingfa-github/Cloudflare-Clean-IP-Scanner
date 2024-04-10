@@ -3,9 +3,9 @@
 [![Go Version](https://img.shields.io/github/go-mod/go-version/Ptechgithub/CloudflareScanner.svg?style=flat-square&label=Go&color=00ADD8&logo=go)](https://github.com/Ptechgithub/CloudflareScanner/)[![Release Version](https://img.shields.io/github/v/release/Ptechgithub/CloudflareScanner.svg?style=flat-square&label=Release&color=00ADD8&logo=github)](https://github.com/Ptechgithub/CloudflareScanner/releases/latest)[![GitHub license](https://img.shields.io/github/license/Ptechgithub/CloudflareScanner.svg?style=flat-square&label=License&color=00ADD8&logo=github)](https://github.com/Ptechgithub/CloudflareScanner/)[![GitHub Star](https://img.shields.io/github/stars/Ptechgithub/CloudflareScanner.svg?style=flat-square&label=Star&color=00ADD8&logo=github)](https://github.com/Ptechgithub/CloudflareScanner/)[![GitHub Fork](https://img.shields.io/github/forks/Ptechgithub/CloudflareScanner.svg?style=flat-square&label=Fork&color=00ADD8&logo=github)](https://github.com/Ptechgithub/CloudflareScanner/)
 
 Many foreign websites are using Cloudflare CDN, but the IP assigned to visitors from mainland China is not friendly (high latency, high packet loss, and slow speed).  
-While Cloudflare exposes all[IP segment](https://www.cloudflare.com/ips/), but trying to find one that suits you among so many IPs would be exhausting, so I came up with this software.
+While Cloudflare exposes all [IP segment](https://www.cloudflare.com/ips/), but trying to find one that suits you among so many IPs would be exhausting, so I came up with this software.
 
-**"Self-selected preferred IP" tests Cloudflare CDN latency and speed to obtain the fastest IP (IPv4+IPv6)**! If it's useful**Click`⭐`Give me some encouragement~**
+**"Self-selected preferred IP" tests Cloudflare CDN latency and speed to obtain the fastest IP (IPv4+IPv6) **! If it's useful**Click`⭐`Give me some encouragement~**
 
 * * *
 
@@ -21,7 +21,7 @@ While Cloudflare exposes all[IP segment](https://www.cloudflare.com/ips/), but t
 
 * * *
 
-The following commands are only examples. For the version number and file name, please go to[**Releases**](https://github.com/Ptechgithub/CloudflareScanner/releases)Check.
+The following commands are only examples. For the version number and file name, please go to [**Releases**](https://github.com/Ptechgithub/CloudflareScanner/releases) Check.
 
 ```yaml
 # If this is your first time using it, it is recommended to create a new folder (skip this step for subsequent updates)
